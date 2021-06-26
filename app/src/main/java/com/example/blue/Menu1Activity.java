@@ -17,10 +17,9 @@ public class Menu1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu1);
 
-        ViewPager pager = (ViewPager) findViewById(R.id.menu1_viewpager);
+        ViewPager pager = (ViewPager) findViewById(R.id.menu1_pager);
         pager.setOffscreenPageLimit(3);
         PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager());
-        pager.setAdapter(adapter);
 
         Menu1Fragment1 fragment1 = new Menu1Fragment1();
         adapter.addItem(fragment1);
@@ -28,6 +27,8 @@ public class Menu1Activity extends AppCompatActivity {
         adapter.addItem(fragment2);
         Menu1Fragment3 fragment3 = new Menu1Fragment3();
         adapter.addItem(fragment3);
+
+        pager.setAdapter(adapter);
 
     }
 

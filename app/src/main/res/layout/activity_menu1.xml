@@ -6,19 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".Menu1Activity">
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/menu1_viewpager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/menu1_tab"
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/menu1_pager"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:tabBackground="@drawable/tab_selector"
-            app:tabGravity="center"
-            app:tabIndicatorHeight="0dp" />
+            android:layout_height="match_parent">
 
-    </androidx.viewpager.widget.ViewPager>
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/menu1_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:tabBackground="@drawable/tab_selector"
+                app:tabGravity="center"
+                app:tabIndicatorHeight="0dp"/>
+
+        </androidx.viewpager.widget.ViewPager>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

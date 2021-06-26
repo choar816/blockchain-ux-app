@@ -4,11 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Menu1Fragment1">
-
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="40dp"
-        android:text="menu1 - fragment1" />
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="40dp"
+            android:text="menu1 - fragment1\n\n\n\na\n\n\n\nb\n\n\n\nc\n\n\n\nd\n\ne" />
+    </ScrollView>
 
 </FrameLayout>

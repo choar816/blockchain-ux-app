@@ -9,14 +9,14 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button button1 = (Button) findViewById(R.id.button1);
-    Button button2 = (Button) findViewById(R.id.button2);
-    Button button3 = (Button) findViewById(R.id.button3);
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button button1 = (Button) findViewById(R.id.button1);
+        Button button2 = (Button) findViewById(R.id.button2);
+        Button button3 = (Button) findViewById(R.id.button3);
 
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-/*
+
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Do something in response to button click
@@ -33,8 +33,9 @@ public class MainActivity extends AppCompatActivity {
 
         button3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Do something in response to button click
+                Intent intent = new Intent(getApplicationContext(), Menu3Activity.class);
+                startActivity(intent);
             }
-        });*/
+        });
     }
 }
