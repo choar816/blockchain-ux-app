@@ -1,12 +1,15 @@
 package com.example.blue;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 
@@ -27,9 +30,13 @@ public class Menu1Activity extends AppCompatActivity {
         adapter.addItem(fragment2);
         Menu1Fragment3 fragment3 = new Menu1Fragment3();
         adapter.addItem(fragment3);
+        Menu1Fragment4 fragment4 = new Menu1Fragment4();
+        adapter.addItem(fragment4);
 
         pager.setAdapter(adapter);
 
+        TabLayout tab = (TabLayout) findViewById(R.id.menu1_tab);
+        tab.setupWithViewPager(pager);
     }
 
     class PagerAdapter extends FragmentStatePagerAdapter {
