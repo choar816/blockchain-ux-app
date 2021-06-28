@@ -1,38 +1,31 @@
 package com.example.blue;
 
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.ImageView;
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.opengl.GLES20;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.widget.ImageView;
-
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 
-public class Menu1Activity extends AppCompatActivity {
-
-    private ImageView img1;
+public class Menu2Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu1);
+        setContentView(R.layout.activity_menu2);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("블록체인 UX");
+        getSupportActionBar().setTitle("체크리스트");
 
-        ViewPager pager = (ViewPager) findViewById(R.id.menu1_pager);
-        pager.setOffscreenPageLimit(3);
+        ViewPager pager = (ViewPager) findViewById(R.id.menu2_pager);
+        pager.setOffscreenPageLimit(5);
         PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager());
 
         Menu1Fragment1 fragment1 = new Menu1Fragment1();
@@ -46,24 +39,8 @@ public class Menu1Activity extends AppCompatActivity {
 
         pager.setAdapter(adapter);
 
-        TabLayout tab = (TabLayout) findViewById(R.id.menu1_tab);
+        TabLayout tab = (TabLayout) findViewById(R.id.menu2_tab);
         tab.setupWithViewPager(pager);
-
-/*
-        img1 = (ImageView) findViewById(R.id.menu1_imgview1);
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.menu1_img1);
-        //Bitmap resized = Bitmap.createScaledBitmap( bitmap, 240, 160, true );
-
-        int[] maxTextureSize = new int[1];
-        GLES20.glGetIntegerv(GLES20.GL_MAX_TEXTURE_SIZE, maxTextureSize, 0);
-
-        if (bitmap.getHeight() > maxTextureSize[0]){
-            int resizedWidth = 160;
-            int resizedHeight = 80;
-            bitmap.createScaledBitmap(bitmap, resizedWidth, resizedHeight, false);
-        }
-
-        img1.setImageBitmap(bitmap);*/
 
     }
 
