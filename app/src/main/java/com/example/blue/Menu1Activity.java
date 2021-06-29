@@ -13,6 +13,8 @@ import android.graphics.BitmapFactory;
 import android.opengl.GLES20;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.google.android.material.tabs.TabLayout;
@@ -21,16 +23,16 @@ import java.util.ArrayList;
 
 public class Menu1Activity extends AppCompatActivity {
 
-    private ImageView img1;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu1);
 
+        // action bar 설정 (제목, 뒤로가기버튼)
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("블록체인 UX");
 
+        // viewpager, adapter 설정
         ViewPager pager = (ViewPager) findViewById(R.id.menu1_pager);
         pager.setOffscreenPageLimit(3);
         PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager());

@@ -28,7 +28,7 @@ public class Menu2Activity extends AppCompatActivity {
         pager.setOffscreenPageLimit(5);
         PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager());
 
-        Menu1Fragment1 fragment1 = new Menu1Fragment1();
+        Menu2Fragment1 fragment1 = new Menu2Fragment1();
         adapter.addItem(fragment1);
         Menu1Fragment2 fragment2 = new Menu1Fragment2();
         adapter.addItem(fragment2);
