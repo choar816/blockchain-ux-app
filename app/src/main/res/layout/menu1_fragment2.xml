@@ -66,6 +66,15 @@
             android:textSize="16dp"
             android:text="서비스 운영 중 UX 개선" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textSize="12dp"
+            android:text="Designed by vectorjuice, upklyak / Freepik" />
+
 
     </LinearLayout>
     </ScrollView>

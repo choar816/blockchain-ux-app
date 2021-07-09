@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Menu2Fragment1">
+    tools:context=".Menu2Fragment6">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -14,445 +14,455 @@
             android:padding="24dp"
             android:orientation="vertical">
 
+
             <TextView
-                android:id="@+id/question_101"
+                android:id="@+id/question_601"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/question_101"/>
+                android:text="@string/question_601"/>
 
             <RadioGroup
-                android:id="@+id/rg_101"
+                android:id="@+id/rg_601"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center">
 
                 <RadioButton
-                    android:id="@+id/radio_101a"
+                    android:id="@+id/radio_601a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_101b"
+                    android:id="@+id/radio_601b"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_101c"
+                    android:id="@+id/radio_601c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_101d"
+                    android:id="@+id/radio_601d"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_101e"
+                    android:id="@+id/radio_601e"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_101f"
+                    android:id="@+id/radio_601f"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </RadioGroup>
 
             <TextView
-                android:id="@+id/question_102"
+                android:id="@+id/question_602"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:text="@string/question_102"/>
+                android:text="@string/question_602"/>
 
             <RadioGroup
-                android:id="@+id/rg_102"
+                android:id="@+id/rg_602"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center">
 
                 <RadioButton
-                    android:id="@+id/radio_102a"
+                    android:id="@+id/radio_602a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_102b"
+                    android:id="@+id/radio_602b"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_102c"
+                    android:id="@+id/radio_602c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_102d"
+                    android:id="@+id/radio_602d"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_102e"
+                    android:id="@+id/radio_602e"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_102f"
+                    android:id="@+id/radio_602f"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </RadioGroup>
 
 
             <TextView
-                android:id="@+id/question_103"
+                android:id="@+id/question_603"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:text="@string/question_103"/>
+                android:text="@string/question_603"/>
 
             <RadioGroup
-                android:id="@+id/rg_103"
+                android:id="@+id/rg_603"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center">
 
                 <RadioButton
-                    android:id="@+id/radio_103a"
+                    android:id="@+id/radio_603a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_103b"
+                    android:id="@+id/radio_603b"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_103c"
+                    android:id="@+id/radio_603c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_103d"
+                    android:id="@+id/radio_603d"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_103e"
+                    android:id="@+id/radio_603e"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_103f"
+                    android:id="@+id/radio_603f"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </RadioGroup>
 
             <TextView
-                android:id="@+id/question_104"
+                android:id="@+id/question_604"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:text="@string/question_104"/>
+                android:text="@string/question_604"/>
 
             <RadioGroup
-                android:id="@+id/rg_104"
+                android:id="@+id/rg_604"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center">
 
                 <RadioButton
-                    android:id="@+id/radio_104a"
+                    android:id="@+id/radio_604a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_104b"
+                    android:id="@+id/radio_604b"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_104c"
+                    android:id="@+id/radio_604c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_104d"
+                    android:id="@+id/radio_604d"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_104e"
+                    android:id="@+id/radio_604e"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_104f"
+                    android:id="@+id/radio_604f"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </RadioGroup>
 
             <TextView
-                android:id="@+id/question_105"
+                android:id="@+id/question_605"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:text="@string/question_105"/>
+                android:text="@string/question_605"/>
 
             <RadioGroup
-                android:id="@+id/rg_105"
+                android:id="@+id/rg_605"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center">
 
                 <RadioButton
-                    android:id="@+id/radio_105a"
+                    android:id="@+id/radio_605a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_105b"
+                    android:id="@+id/radio_605b"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_105c"
+                    android:id="@+id/radio_605c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_105d"
+                    android:id="@+id/radio_605d"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_105e"
+                    android:id="@+id/radio_605e"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_105f"
+                    android:id="@+id/radio_605f"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </RadioGroup>
 
             <TextView
-                android:id="@+id/question_106"
+                android:id="@+id/question_606"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:text="@string/question_106"/>
+                android:text="@string/question_606"/>
 
             <RadioGroup
-                android:id="@+id/rg_106"
+                android:id="@+id/rg_606"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center">
 
                 <RadioButton
-                    android:id="@+id/radio_106a"
+                    android:id="@+id/radio_606a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_106b"
+                    android:id="@+id/radio_606b"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_106c"
+                    android:id="@+id/radio_606c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_106d"
+                    android:id="@+id/radio_606d"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_106e"
+                    android:id="@+id/radio_606e"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_106f"
+                    android:id="@+id/radio_606f"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </RadioGroup>
 
             <TextView
-                android:id="@+id/question_107"
+                android:id="@+id/question_607"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:text="@string/question_107"/>
+                android:text="@string/question_607"/>
 
             <RadioGroup
-                android:id="@+id/rg_107"
+                android:id="@+id/rg_607"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center">
 
                 <RadioButton
-                    android:id="@+id/radio_107a"
+                    android:id="@+id/radio_607a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_107b"
+                    android:id="@+id/radio_607b"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_107c"
+                    android:id="@+id/radio_607c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_107d"
+                    android:id="@+id/radio_607d"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_107e"
+                    android:id="@+id/radio_607e"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_107f"
+                    android:id="@+id/radio_607f"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </RadioGroup>
 
             <TextView
-                android:id="@+id/question_108"
+                android:id="@+id/question_608"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:text="@string/question_108"/>
+                android:text="@string/question_608"/>
 
             <RadioGroup
-                android:id="@+id/rg_108"
+                android:id="@+id/rg_608"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center">
 
                 <RadioButton
-                    android:id="@+id/radio_108a"
+                    android:id="@+id/radio_608a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_108b"
+                    android:id="@+id/radio_608b"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_108c"
+                    android:id="@+id/radio_608c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_108d"
+                    android:id="@+id/radio_608d"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_108e"
+                    android:id="@+id/radio_608e"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_108f"
+                    android:id="@+id/radio_608f"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </RadioGroup>
 
             <TextView
-                android:id="@+id/question_109"
+                android:id="@+id/question_609"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:text="@string/question_109"/>
+                android:text="@string/question_609"/>
 
             <RadioGroup
-                android:id="@+id/rg_109"
+                android:id="@+id/rg_609"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center">
 
                 <RadioButton
-                    android:id="@+id/radio_109a"
+                    android:id="@+id/radio_609a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_109b"
+                    android:id="@+id/radio_609b"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_109c"
+                    android:id="@+id/radio_609c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_109d"
+                    android:id="@+id/radio_609d"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_109e"
+                    android:id="@+id/radio_609e"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_109f"
+                    android:id="@+id/radio_609f"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </RadioGroup>
 
             <TextView
-                android:id="@+id/question_110"
+                android:id="@+id/question_610"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:text="@string/question_110"/>
+                android:text="@string/question_610"/>
 
             <RadioGroup
-                android:id="@+id/rg_110"
+                android:id="@+id/rg_610"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center">
 
                 <RadioButton
-                    android:id="@+id/radio_110a"
+                    android:id="@+id/radio_610a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_110b"
+                    android:id="@+id/radio_610b"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_110c"
+                    android:id="@+id/radio_610c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_110d"
+                    android:id="@+id/radio_610d"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_110e"
+                    android:id="@+id/radio_610e"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_110f"
+                    android:id="@+id/radio_610f"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </RadioGroup>
 
             <TextView
-                android:id="@+id/question_111"
+                android:id="@+id/question_611"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:text="@string/question_111"/>
+                android:text="@string/question_611"/>
 
             <RadioGroup
-                android:id="@+id/rg_111"
+                android:id="@+id/rg_611"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center">
 
                 <RadioButton
-                    android:id="@+id/radio_111a"
+                    android:id="@+id/radio_611a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_111b"
+                    android:id="@+id/radio_611b"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_111c"
+                    android:id="@+id/radio_611c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_111d"
+                    android:id="@+id/radio_611d"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_111e"
+                    android:id="@+id/radio_611e"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_111f"
+                    android:id="@+id/radio_611f"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </RadioGroup>
+
+            <Button
+                android:id="@+id/button_result"
+                android:layout_width="160dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="24dp"
+                android:layout_gravity="center"
+                android:textSize="18dp"
+                android:text="결과 확인"/>
 
         </LinearLayout>
     </ScrollView>
