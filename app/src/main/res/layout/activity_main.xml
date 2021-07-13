@@ -12,37 +12,44 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text="Blockchain UX\nchecklist"
-        android:textSize="30dp"
+        android:textSize="36dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="200dp"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button1"
-        android:text="블록체인 UX 가이드라인이란"
+        android:text="어플리케이션 소개"
         android:layout_width="240dp"
         android:layout_height="48dp"
+        android:textColor="@color/white"
+        android:background="@drawable/background_button"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="400dp"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button2"
-        android:text="체크리스트 시작하기"
+        android:text="체크리스트 시작"
         android:layout_width="240dp"
         android:layout_height="48dp"
         android:layout_marginTop="8dp"
+        android:textColor="@color/white"
+        android:background="@drawable/background_button"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/button1" />
-    <Button
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button3"
         android:text="제작사 조회"
         android:layout_width="240dp"
         android:layout_height="48dp"
         android:layout_marginTop="8dp"
+        android:textColor="@color/white"
+        android:background="@drawable/background_button"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/button2" />

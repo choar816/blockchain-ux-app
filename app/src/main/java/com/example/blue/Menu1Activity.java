@@ -30,7 +30,7 @@ public class Menu1Activity extends AppCompatActivity {
 
         // action bar 설정 (제목, 뒤로가기버튼)
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("블록체인 UX");
+        getSupportActionBar().setTitle("어플리케이션 소개");
 
         // viewpager, adapter 설정
         ViewPager pager = (ViewPager) findViewById(R.id.menu1_pager);

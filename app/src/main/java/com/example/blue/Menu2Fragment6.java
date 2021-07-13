@@ -19,16 +19,11 @@ public class Menu2Fragment6 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.menu2_fragment6, container, false);
 
-        Button button_result = (Button) rootView.findViewById(R.id.button_result);
-        button_result.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Menu2Result.class);
-                startActivity(intent);
-                getActivity().finish();
-            }
-        });
+        boolean answer6[] = new boolean[11];
 
+        for (int i=0; i<11; ++i) {
+            answer6[i] = false;
+        }
 
         RadioGroup rg01 = (RadioGroup) rootView.findViewById(R.id.rg_601);
         RadioGroup rg02 = (RadioGroup) rootView.findViewById(R.id.rg_602);
@@ -75,6 +70,8 @@ public class Menu2Fragment6 extends Fragment {
                 } else {
                     q01.setTextColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.textOriginal));
                 }
+
+                answer6[0] = (checkedId == R.id.radio_601a || checkedId == R.id.radio_601b) ? true : false;
             }
         });
 
@@ -86,6 +83,8 @@ public class Menu2Fragment6 extends Fragment {
                 } else {
                     q02.setTextColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.textOriginal));
                 }
+
+                answer6[1] = (checkedId == R.id.radio_602a || checkedId == R.id.radio_602b) ? true : false;
             }
         });
 
@@ -97,6 +96,8 @@ public class Menu2Fragment6 extends Fragment {
                 } else {
                     q03.setTextColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.textOriginal));
                 }
+
+                answer6[2] = (checkedId == R.id.radio_603a || checkedId == R.id.radio_603b) ? true : false;
             }
         });
 
@@ -108,6 +109,8 @@ public class Menu2Fragment6 extends Fragment {
                 } else {
                     q04.setTextColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.textOriginal));
                 }
+
+                answer6[3] = (checkedId == R.id.radio_604a || checkedId == R.id.radio_604b) ? true : false;
             }
         });
 
@@ -119,6 +122,8 @@ public class Menu2Fragment6 extends Fragment {
                 } else {
                     q05.setTextColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.textOriginal));
                 }
+
+                answer6[4] = (checkedId == R.id.radio_605a || checkedId == R.id.radio_605b) ? true : false;
             }
         });
 
@@ -130,6 +135,8 @@ public class Menu2Fragment6 extends Fragment {
                 } else {
                     q06.setTextColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.textOriginal));
                 }
+
+                answer6[5] = (checkedId == R.id.radio_606a || checkedId == R.id.radio_606b) ? true : false;
             }
         });
 
@@ -141,6 +148,8 @@ public class Menu2Fragment6 extends Fragment {
                 } else {
                     q07.setTextColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.textOriginal));
                 }
+
+                answer6[6] = (checkedId == R.id.radio_607a || checkedId == R.id.radio_607b) ? true : false;
             }
         });
 
@@ -152,6 +161,8 @@ public class Menu2Fragment6 extends Fragment {
                 } else {
                     q08.setTextColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.textOriginal));
                 }
+
+                answer6[7] = (checkedId == R.id.radio_608a || checkedId == R.id.radio_608b) ? true : false;
             }
         });
 
@@ -163,6 +174,8 @@ public class Menu2Fragment6 extends Fragment {
                 } else {
                     q09.setTextColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.textOriginal));
                 }
+
+                answer6[8] = (checkedId == R.id.radio_609a || checkedId == R.id.radio_609b) ? true : false;
             }
         });
 
@@ -174,6 +187,8 @@ public class Menu2Fragment6 extends Fragment {
                 } else {
                     q10.setTextColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.textOriginal));
                 }
+
+                answer6[9] = (checkedId == R.id.radio_610a || checkedId == R.id.radio_610b) ? true : false;
             }
         });
 
@@ -185,9 +200,23 @@ public class Menu2Fragment6 extends Fragment {
                 } else {
                     q11.setTextColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.textOriginal));
                 }
+
+                answer6[10] = (checkedId == R.id.radio_611a || checkedId == R.id.radio_611b) ? true : false;
             }
         });
 
+
+        // 결과 확인 버튼
+        Button button_result = (Button) rootView.findViewById(R.id.button_result);
+        button_result.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), Menu2Result.class);
+                intent.putExtra("answer6", answer6);
+                startActivity(intent);
+                getActivity().finish();
+            }
+        });
 
         return rootView;
     }

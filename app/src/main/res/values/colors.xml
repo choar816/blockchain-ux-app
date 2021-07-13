@@ -8,6 +8,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="colorAccent">#FF1D9CFD</color>
+
+    <color name="navy_1">#FF15386D</color> <!-- 21, 56, 109 -->
+    <color name="navy_2">#FF072F6B</color>
+    <color name="navy_3">#FF265B96</color> <!-- 38, 91, 150 -->
+    <color name="navy_4">#FF6197B0</color> <!-- 97, 151, 176 -->
+    <color name="gray_1">#FFE0E0E0</color> <!-- 224, 224, 224-->
+
     <color name="textOriginal">#FF6E6E6E</color>
     <color name="textOmitted">#806E6E6E</color>
 </resources>

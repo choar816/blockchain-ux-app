@@ -1,5 +1,6 @@
 package com.example.blue;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -18,7 +19,6 @@ public class Menu2Fragment1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.menu2_fragment1, container, false);
-        View resultView = inflater.inflate(R.layout.activity_menu2_result, container, false);
 
         RadioGroup rg101 = (RadioGroup) rootView.findViewById(R.id.rg_101);
         RadioGroup rg102 = (RadioGroup) rootView.findViewById(R.id.rg_102);
@@ -44,7 +44,6 @@ public class Menu2Fragment1 extends Fragment {
         TextView q110 = (TextView) rootView.findViewById(R.id.question_110);
         TextView q111 = (TextView) rootView.findViewById(R.id.question_111);
 
-        TextView a101 = (TextView) resultView.findViewById(R.id.answer_101);
 
         rg101.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -55,13 +54,14 @@ public class Menu2Fragment1 extends Fragment {
                 } else {
                     q101.setTextColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.textOriginal));
                 }
-
+/*
                 // 전혀 아니다, 아니다 -> 솔루션 visible
                 if (checkedId == R.id.radio_101a || checkedId == R.id.radio_101b) {
-                    a101.setVisibility(View.VISIBLE);
+                    result.UpdateVisible(R.id.answer_101);
                 } else {
-                    a101.setVisibility(View.GONE);
+                    result.UpdateInvisible(R.id.answer_101);
                 }
+*/
             }
         });
 

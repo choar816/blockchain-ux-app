@@ -1,13 +1,16 @@
 package com.example.blue;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
@@ -18,6 +21,7 @@ import com.google.android.material.tabs.TabLayout;
 import java.util.ArrayList;
 
 public class Menu2Activity extends AppCompatActivity {
+    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,19 +65,19 @@ public class Menu2Activity extends AppCompatActivity {
                         title.setText("암호 화폐 지갑");
                         break;
                     case 1:
-                        title.setText("거     래");
+                        title.setText("거래");
                         break;
                     case 2:
-                        title.setText("보     상");
+                        title.setText("보상");
                         break;
                     case 3:
-                        title.setText("큐  레  이  팅");
+                        title.setText("큐레이팅");
                         break;
                     case 4:
-                        title.setText("보     안");
+                        title.setText("보안");
                         break;
                     case 5:
-                        title.setText("증     명");
+                        title.setText("증명");
                         break;
                 }
             }
@@ -85,7 +89,6 @@ public class Menu2Activity extends AppCompatActivity {
 
         TabLayout tab = (TabLayout) findViewById(R.id.menu2_tab);
         tab.setupWithViewPager(pager);
-
     }
 
 
@@ -120,3 +123,4 @@ public class Menu2Activity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 }
+

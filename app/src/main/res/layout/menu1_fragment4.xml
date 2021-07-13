@@ -18,9 +18,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
                 android:textStyle="bold"
                 android:textSize="24dp"
-                android:text="본 체크리스트에서 고려하는 UX 요소" />
+                android:text="UX 소개" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UX란 서비스에 대한 사용자의 총체적 경험을 말합니다. 본 체크리스트를 통해 다음과 같은 UX를 향상시킬 수 있습니다."/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -28,13 +35,13 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="32dp">
                 <TextView
-                    android:layout_width="96dp"
+                    android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/background_text"
                     android:padding="6dp"
                     android:layout_marginRight="16dp"
                     android:text="사용성"
-                    android:textSize="16dp"
+                    android:textSize="18dp"
                     android:textStyle="bold"
                     android:textAlignment="center"
                     android:gravity="center_horizontal" />
@@ -53,13 +60,13 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="28dp">
                 <TextView
-                    android:layout_width="96dp"
+                    android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/background_text"
                     android:padding="6dp"
                     android:layout_marginRight="16dp"
                     android:text="감성"
-                    android:textSize="16dp"
+                    android:textSize="18dp"
                     android:textStyle="bold"
                     android:textAlignment="center"
                     android:gravity="center_horizontal" />
@@ -78,13 +85,13 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="28dp">
                 <TextView
-                    android:layout_width="96dp"
+                    android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/background_text"
                     android:padding="6dp"
                     android:layout_marginRight="16dp"
                     android:text="사회성"
-                    android:textSize="16dp"
+                    android:textSize="18dp"
                     android:textStyle="bold"
                     android:textAlignment="center"
                     android:gravity="center_horizontal" />
@@ -103,13 +110,13 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="28dp">
                 <TextView
-                    android:layout_width="96dp"
+                    android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/background_text"
                     android:padding="6dp"
                     android:layout_marginRight="16dp"
                     android:text="사회적 가치"
-                    android:textSize="16dp"
+                    android:textSize="18dp"
                     android:textStyle="bold"
                     android:textAlignment="center"
                     android:gravity="center_horizontal" />
@@ -119,7 +126,7 @@
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
                     android:textSize="16dp"
-                    android:text="블록체인을 활용하여 다양한 사회적 경험을 향상시킨다" />
+                    android:text="서비스를 활용하여 다양한 사회적 경험을 향상시킨다" />
             </LinearLayout>
 
             <LinearLayout
@@ -128,13 +135,13 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="28dp">
                 <TextView
-                    android:layout_width="96dp"
+                    android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/background_text"
                     android:padding="6dp"
                     android:layout_marginRight="16dp"
                     android:text="경제적 가치"
-                    android:textSize="16dp"
+                    android:textSize="18dp"
                     android:textStyle="bold"
                     android:textAlignment="center"
                     android:gravity="center_horizontal" />
@@ -144,7 +151,7 @@
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
                     android:textSize="16dp"
-                    android:text="블록체인 서비스를 통해 경제적 이익을 실현할 수 있다" />
+                    android:text="서비스를 통해 경제적 이익을 실현할 수 있다" />
             </LinearLayout>
 
             <LinearLayout
@@ -153,13 +160,13 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="28dp">
                 <TextView
-                    android:layout_width="96dp"
+                    android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/background_text"
                     android:padding="6dp"
                     android:layout_marginRight="16dp"
                     android:text="신뢰"
-                    android:textSize="16dp"
+                    android:textSize="18dp"
                     android:textStyle="bold"
                     android:textAlignment="center"
                     android:gravity="center_horizontal" />
@@ -169,17 +176,8 @@
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
                     android:textSize="16dp"
-                    android:text="블록체인 서비스를 통해 서비스와 관련된 경험의 신뢰를 향상시킨다" />
+                    android:text="서비스와 관련된 경험의 신뢰를 향상시킨다" />
             </LinearLayout>
-
-            <Button
-                android:id="@+id/button_home"
-                android:layout_width="104dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="24dp"
-                android:layout_gravity="center"
-                android:textSize="18dp"
-                android:text="확인"/>
 
         </LinearLayout>
     </ScrollView>
