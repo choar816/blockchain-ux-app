@@ -27,28 +27,34 @@
                 android:orientation="horizontal"
                 android:gravity="center">
 
-                <RadioButton
+                <androidx.appcompat.widget.AppCompatRadioButton
                     android:id="@+id/radio_101a"
+                    style="@style/radio1_style"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
+                <androidx.appcompat.widget.AppCompatRadioButton
                     android:id="@+id/radio_101b"
+                    style="@style/radio1_style"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
+                <androidx.appcompat.widget.AppCompatRadioButton
                     android:id="@+id/radio_101c"
+                    style="@style/radio1_style"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
+                <androidx.appcompat.widget.AppCompatRadioButton
                     android:id="@+id/radio_101d"
+                    style="@style/radio1_style"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
+                <androidx.appcompat.widget.AppCompatRadioButton
                     android:id="@+id/radio_101e"
+                    style="@style/radio1_style"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
+                <androidx.appcompat.widget.AppCompatRadioButton
                     android:id="@+id/radio_101f"
+                    style="@style/radio2_style"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </RadioGroup>
@@ -453,6 +459,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </RadioGroup>
+
+            <Button
+                android:id="@+id/button_next1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="다음"/>
 
         </LinearLayout>
     </ScrollView>

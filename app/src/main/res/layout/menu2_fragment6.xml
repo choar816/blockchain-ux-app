@@ -28,8 +28,9 @@
                 android:orientation="horizontal"
                 android:gravity="center">
 
-                <RadioButton
+                <androidx.appcompat.widget.AppCompatRadioButton
                     android:id="@+id/radio_601a"
+                    style="@style/radio1_style"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton

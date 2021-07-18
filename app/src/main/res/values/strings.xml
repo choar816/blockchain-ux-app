@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BLUE_v.3</string>
+    <string name="app_name">BLUE_v.4</string>
     <string name="menu2_title">암호 화폐 지갑</string>
 
     <string name="menu1_1">본 체크리스트는 경험공학 연구실(EDEN)에서 개발한 블록체인 서비스 UX 가이드라인 중 주요항목을 선별하여 블록체인 서비스의 개발자 또는 운영자가 손쉽게 블록체인 서비스의 UX를 점검해 볼 수 있도록 만든 체크리스트입니다.\n\n체크리스트의 사용 편리성을 위해 일반적인 서비스에는 적용할 수 없는, 블록체인에 특화된 고려사항만을 포함하고 있으므로, UX를 고려한 서비스 설계에 익숙하지 않은 이용자는 일반적인 UX 가이드라인을 함께 고려함으로써 효과를 극대화할 수 있습니다.</string>
@@ -151,7 +151,5 @@
     <string name="answer_609">타 사용자가 신원이 증명된 사용자인지 확인할 수 있는 기능을 제공한다</string>
     <string name="answer_610">블록체인을 이용하여 자산, 정보를 증명하는 방식은 대부분의 사용자에게 익숙하지 않으므로, 관련 정보를 안내해야 한다</string>
     <string name="answer_611">블록체인을 활용한 증명 기능을 통해 사용자의 재산을 보호해야 한다</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

@@ -1,6 +1,7 @@
 package com.example.blue;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -10,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
@@ -19,6 +21,12 @@ public class Menu2Fragment1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.menu2_fragment1, container, false);
+
+        boolean answer1[] = new boolean[11];
+
+        for (int i=0; i<11; ++i) {
+            answer1[i] = false;
+        }
 
         RadioGroup rg101 = (RadioGroup) rootView.findViewById(R.id.rg_101);
         RadioGroup rg102 = (RadioGroup) rootView.findViewById(R.id.rg_102);
@@ -54,14 +62,8 @@ public class Menu2Fragment1 extends Fragment {
                 } else {
                     q101.setTextColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.textOriginal));
                 }
-/*
-                // 전혀 아니다, 아니다 -> 솔루션 visible
-                if (checkedId == R.id.radio_101a || checkedId == R.id.radio_101b) {
-                    result.UpdateVisible(R.id.answer_101);
-                } else {
-                    result.UpdateInvisible(R.id.answer_101);
-                }
-*/
+
+                answer1[0] = (checkedId == R.id.radio_601a || checkedId == R.id.radio_601b) ? true : false;
             }
         });
 
@@ -73,6 +75,8 @@ public class Menu2Fragment1 extends Fragment {
                 } else {
                     q102.setTextColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.textOriginal));
                 }
+
+                answer1[1] = (checkedId == R.id.radio_601a || checkedId == R.id.radio_601b) ? true : false;
             }
         });
 
@@ -175,6 +179,22 @@ public class Menu2Fragment1 extends Fragment {
             }
         });
 
+        /*
+        Button next = (Button) rootView.findViewById(R.id.button_next1);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Menu2Fragment2 fragment2 = new Menu2Fragment2();
+                Bundle bundle = new Bundle();
+                bundle.putBooleanArray("answer1", answer1);
+                fragment2.setArguments(bundle);
+
+                getFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.content, fragment2)
+                        .commit();
+            }
+        });*/
 
         return rootView;
     }

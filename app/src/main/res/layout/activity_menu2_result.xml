@@ -5,8 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="16dp"
     tools:context=".Menu2Result">
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
@@ -20,6 +28,7 @@
         android:text="UX 향상을 위해 필요한 가이드"/>
 
     <TextView
+        android:id="@+id/answer_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/background_text"
@@ -30,34 +39,209 @@
         android:textAlignment="center"
         android:textStyle="bold"
         android:textSize="16dp"
-        android:text="암호화폐 지갑"/>
+        android:text="암호화폐 지갑"
+        android:visibility="visible"/>
 
     <TextView
         android:id="@+id/answer_101"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:text="@string/answer_101"
-        android:visibility="gone"/>
+        android:visibility="visible"/>
 
     <TextView
         android:id="@+id/answer_102"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:text="@string/answer_102"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/answer_103"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/answer_103"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/answer_104"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/answer_104"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/answer_105"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/answer_105"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/answer_106"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/answer_106"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/answer_107"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/answer_107"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/answer_108"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/answer_108"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/answer_109"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/answer_109"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/answer_110"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/answer_110"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/answer_111"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/answer_111"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/answer_6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_text"
+        android:padding="8dp"
+        android:layout_marginVertical="16dp"
+        android:layout_marginHorizontal="32dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:text="증명"
         android:visibility="visible"/>
 
     <TextView
         android:id="@+id/answer_601"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:text="@string/answer_601"
-        android:visibility="gone"/>
+        android:visibility="visible"/>
 
     <TextView
         android:id="@+id/answer_602"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:text="@string/answer_602"
-        android:visibility="gone"/>
+        android:visibility="visible"/>
 
+    <TextView
+        android:id="@+id/answer_603"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/answer_603"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/answer_604"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/answer_604"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/answer_605"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/answer_605"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/answer_606"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/answer_606"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/answer_607"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/answer_607"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/answer_608"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/answer_608"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/answer_609"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/answer_609"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/answer_610"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/answer_610"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/answer_611"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/answer_611"
+        android:visibility="visible"/>
+
+    <Button
+        android:id="@+id/save_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:text="가이드 저장하기"/>
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
