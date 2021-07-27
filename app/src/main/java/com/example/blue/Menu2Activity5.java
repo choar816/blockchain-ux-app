@@ -1,8 +1,5 @@
 package com.example.blue;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -12,47 +9,50 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Menu2Activity1 extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
+public class Menu2Activity5 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu2_1);
+        setContentView(R.layout.activity_menu2_5);
 
         // action bar 설정 (제목, 뒤로가기버튼)
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("체크리스트");
 
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+        boolean[] answer1 = bundle.getBooleanArray("answer1");
+        boolean[] answer2 = bundle.getBooleanArray("answer2");
+        boolean[] answer3 = bundle.getBooleanArray("answer3");
+        boolean[] answer4 = bundle.getBooleanArray("answer4");
 
-        boolean answer[] = new boolean[11];
+        boolean answer[] = new boolean[8];
 
-        for (int i=0; i<11; ++i) {
+        for (int i=0; i<8; ++i) {
             answer[i] = false;
         }
 
-        RadioGroup rg01 = (RadioGroup) findViewById(R.id.rg_101);
-        RadioGroup rg02 = (RadioGroup) findViewById(R.id.rg_102);
-        RadioGroup rg03 = (RadioGroup) findViewById(R.id.rg_103);
-        RadioGroup rg04 = (RadioGroup) findViewById(R.id.rg_104);
-        RadioGroup rg05 = (RadioGroup) findViewById(R.id.rg_105);
-        RadioGroup rg06 = (RadioGroup) findViewById(R.id.rg_106);
-        RadioGroup rg07 = (RadioGroup) findViewById(R.id.rg_107);
-        RadioGroup rg08 = (RadioGroup) findViewById(R.id.rg_108);
-        RadioGroup rg09 = (RadioGroup) findViewById(R.id.rg_109);
-        RadioGroup rg10 = (RadioGroup) findViewById(R.id.rg_110);
-        RadioGroup rg11 = (RadioGroup) findViewById(R.id.rg_111);
+        RadioGroup rg01 = (RadioGroup) findViewById(R.id.rg_501);
+        RadioGroup rg02 = (RadioGroup) findViewById(R.id.rg_502);
+        RadioGroup rg03 = (RadioGroup) findViewById(R.id.rg_503);
+        RadioGroup rg04 = (RadioGroup) findViewById(R.id.rg_504);
+        RadioGroup rg05 = (RadioGroup) findViewById(R.id.rg_505);
+        RadioGroup rg06 = (RadioGroup) findViewById(R.id.rg_506);
+        RadioGroup rg07 = (RadioGroup) findViewById(R.id.rg_507);
+        RadioGroup rg08 = (RadioGroup) findViewById(R.id.rg_508);
 
-        TextView q01 = (TextView) findViewById(R.id.question_101);
-        TextView q02 = (TextView) findViewById(R.id.question_102);
-        TextView q03 = (TextView) findViewById(R.id.question_103);
-        TextView q04 = (TextView) findViewById(R.id.question_104);
-        TextView q05 = (TextView) findViewById(R.id.question_105);
-        TextView q06 = (TextView) findViewById(R.id.question_106);
-        TextView q07 = (TextView) findViewById(R.id.question_107);
-        TextView q08 = (TextView) findViewById(R.id.question_108);
-        TextView q09 = (TextView) findViewById(R.id.question_109);
-        TextView q10 = (TextView) findViewById(R.id.question_110);
-        TextView q11 = (TextView) findViewById(R.id.question_111);
+        TextView q01 = (TextView) findViewById(R.id.question_501);
+        TextView q02 = (TextView) findViewById(R.id.question_502);
+        TextView q03 = (TextView) findViewById(R.id.question_503);
+        TextView q04 = (TextView) findViewById(R.id.question_504);
+        TextView q05 = (TextView) findViewById(R.id.question_505);
+        TextView q06 = (TextView) findViewById(R.id.question_506);
+        TextView q07 = (TextView) findViewById(R.id.question_507);
+        TextView q08 = (TextView) findViewById(R.id.question_508);
 
 
         rg01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -167,73 +167,35 @@ public class Menu2Activity1 extends AppCompatActivity {
             }
         });
 
-        rg09.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                int index = group.indexOfChild(group.findViewById(checkedId));
-                if (index == 5) {
-                    q09.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOmitted));
-                } else {
-                    q09.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOriginal));
-                }
 
-                answer[8] = (index == 0 || index == 1);
+        Button prev = (Button) findViewById(R.id.btn5_prev);
+        Button next = (Button) findViewById(R.id.btn5_next);
+        prev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Menu2Activity4.class);
+                startActivity(intent);
+                finish();
             }
         });
-
-        rg10.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                int index = group.indexOfChild(group.findViewById(checkedId));
-                if (index == 5) {
-                    q10.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOmitted));
-                } else {
-                    q10.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOriginal));
-                }
-
-                answer[9] = (index == 0 || index == 1);
-            }
-        });
-
-        rg11.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                int index = group.indexOfChild(group.findViewById(checkedId));
-                if (index == 5) {
-                    q11.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOmitted));
-                } else {
-                    q11.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOriginal));
-                }
-
-                answer[10] = (index == 0 || index == 1);
-            }
-        });
-
-
-        Button next = (Button) findViewById(R.id.btn1_next);
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-/*                if (rg01.getCheckedRadioButtonId() == -1 || rg02.getCheckedRadioButtonId() == -1 ||
+                if (rg01.getCheckedRadioButtonId() == -1 || rg02.getCheckedRadioButtonId() == -1 ||
                         rg03.getCheckedRadioButtonId() == -1 || rg04.getCheckedRadioButtonId() == -1 ||
                         rg05.getCheckedRadioButtonId() == -1 || rg06.getCheckedRadioButtonId() == -1 ||
-                        rg07.getCheckedRadioButtonId() == -1 || rg08.getCheckedRadioButtonId() == -1 ||
-                        rg09.getCheckedRadioButtonId() == -1 || rg10.getCheckedRadioButtonId() == -1 ||
-                        rg11.getCheckedRadioButtonId() == -1) {
+                        rg07.getCheckedRadioButtonId() == -1 || rg08.getCheckedRadioButtonId() == -1) {
                     Toast.makeText(getApplicationContext(), "모든 항목을 선택하세요", Toast.LENGTH_SHORT).show();
                 } else {
-                    Intent intent = new Intent(getApplicationContext(), Menu2Activity2.class);
-                    intent.putExtra("answer1", answer);
+                    Intent intent = new Intent(getApplicationContext(), Menu2Activity6.class);
+                    intent.putExtra("answer1", answer1);
+                    intent.putExtra("answer2", answer2);
+                    intent.putExtra("answer3", answer3);
+                    intent.putExtra("answer4", answer4);
+                    intent.putExtra("answer5", answer);
                     startActivity(intent);
                     finish();
-                }*/
-
-                Intent intent = new Intent(getApplicationContext(), Menu2Activity2.class);
-                intent.putExtra("answer1", answer);
-                startActivity(intent);
-                finish();
-
+                }
             }
         });
     }

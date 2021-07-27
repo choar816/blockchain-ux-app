@@ -1,8 +1,5 @@
 package com.example.blue;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -12,48 +9,56 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Menu2Activity1 extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
+public class Menu2Activity6 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu2_1);
+        setContentView(R.layout.activity_menu2_6);
 
         // action bar 설정 (제목, 뒤로가기버튼)
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("체크리스트");
 
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+        boolean[] answer1 = bundle.getBooleanArray("answer1");
+        boolean[] answer2 = bundle.getBooleanArray("answer2");
+        boolean[] answer3 = bundle.getBooleanArray("answer3");
+        boolean[] answer4 = bundle.getBooleanArray("answer4");
+        boolean[] answer5 = bundle.getBooleanArray("answer5");
 
         boolean answer[] = new boolean[11];
-
         for (int i=0; i<11; ++i) {
             answer[i] = false;
         }
 
-        RadioGroup rg01 = (RadioGroup) findViewById(R.id.rg_101);
-        RadioGroup rg02 = (RadioGroup) findViewById(R.id.rg_102);
-        RadioGroup rg03 = (RadioGroup) findViewById(R.id.rg_103);
-        RadioGroup rg04 = (RadioGroup) findViewById(R.id.rg_104);
-        RadioGroup rg05 = (RadioGroup) findViewById(R.id.rg_105);
-        RadioGroup rg06 = (RadioGroup) findViewById(R.id.rg_106);
-        RadioGroup rg07 = (RadioGroup) findViewById(R.id.rg_107);
-        RadioGroup rg08 = (RadioGroup) findViewById(R.id.rg_108);
-        RadioGroup rg09 = (RadioGroup) findViewById(R.id.rg_109);
-        RadioGroup rg10 = (RadioGroup) findViewById(R.id.rg_110);
-        RadioGroup rg11 = (RadioGroup) findViewById(R.id.rg_111);
+        RadioGroup rg01 = (RadioGroup) findViewById(R.id.rg_601);
+        RadioGroup rg02 = (RadioGroup) findViewById(R.id.rg_602);
+        RadioGroup rg03 = (RadioGroup) findViewById(R.id.rg_603);
+        RadioGroup rg04 = (RadioGroup) findViewById(R.id.rg_604);
+        RadioGroup rg05 = (RadioGroup) findViewById(R.id.rg_605);
+        RadioGroup rg06 = (RadioGroup) findViewById(R.id.rg_606);
+        RadioGroup rg07 = (RadioGroup) findViewById(R.id.rg_607);
+        RadioGroup rg08 = (RadioGroup) findViewById(R.id.rg_608);
+        RadioGroup rg09 = (RadioGroup) findViewById(R.id.rg_609);
+        RadioGroup rg10 = (RadioGroup) findViewById(R.id.rg_610);
+        RadioGroup rg11 = (RadioGroup) findViewById(R.id.rg_611);
 
-        TextView q01 = (TextView) findViewById(R.id.question_101);
-        TextView q02 = (TextView) findViewById(R.id.question_102);
-        TextView q03 = (TextView) findViewById(R.id.question_103);
-        TextView q04 = (TextView) findViewById(R.id.question_104);
-        TextView q05 = (TextView) findViewById(R.id.question_105);
-        TextView q06 = (TextView) findViewById(R.id.question_106);
-        TextView q07 = (TextView) findViewById(R.id.question_107);
-        TextView q08 = (TextView) findViewById(R.id.question_108);
-        TextView q09 = (TextView) findViewById(R.id.question_109);
-        TextView q10 = (TextView) findViewById(R.id.question_110);
-        TextView q11 = (TextView) findViewById(R.id.question_111);
-
+        TextView q01 = (TextView) findViewById(R.id.question_601);
+        TextView q02 = (TextView) findViewById(R.id.question_602);
+        TextView q03 = (TextView) findViewById(R.id.question_603);
+        TextView q04 = (TextView) findViewById(R.id.question_604);
+        TextView q05 = (TextView) findViewById(R.id.question_605);
+        TextView q06 = (TextView) findViewById(R.id.question_606);
+        TextView q07 = (TextView) findViewById(R.id.question_607);
+        TextView q08 = (TextView) findViewById(R.id.question_608);
+        TextView q09 = (TextView) findViewById(R.id.question_609);
+        TextView q10 = (TextView) findViewById(R.id.question_610);
+        TextView q11 = (TextView) findViewById(R.id.question_611);
 
         rg01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -210,12 +215,22 @@ public class Menu2Activity1 extends AppCompatActivity {
         });
 
 
-        Button next = (Button) findViewById(R.id.btn1_next);
+
+
+        Button prev = (Button) findViewById(R.id.btn6_prev);
+        Button next = (Button) findViewById(R.id.btn6_next);
+        prev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Menu2Activity5.class);
+                startActivity(intent);
+                finish();
+            }
+        });
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-/*                if (rg01.getCheckedRadioButtonId() == -1 || rg02.getCheckedRadioButtonId() == -1 ||
+                if (rg01.getCheckedRadioButtonId() == -1 || rg02.getCheckedRadioButtonId() == -1 ||
                         rg03.getCheckedRadioButtonId() == -1 || rg04.getCheckedRadioButtonId() == -1 ||
                         rg05.getCheckedRadioButtonId() == -1 || rg06.getCheckedRadioButtonId() == -1 ||
                         rg07.getCheckedRadioButtonId() == -1 || rg08.getCheckedRadioButtonId() == -1 ||
@@ -223,19 +238,20 @@ public class Menu2Activity1 extends AppCompatActivity {
                         rg11.getCheckedRadioButtonId() == -1) {
                     Toast.makeText(getApplicationContext(), "모든 항목을 선택하세요", Toast.LENGTH_SHORT).show();
                 } else {
-                    Intent intent = new Intent(getApplicationContext(), Menu2Activity2.class);
-                    intent.putExtra("answer1", answer);
+                    Intent intent = new Intent(getApplicationContext(), Menu2Result.class);
+                    intent.putExtra("answer1", answer1);
+                    intent.putExtra("answer2", answer2);
+                    intent.putExtra("answer3", answer3);
+                    intent.putExtra("answer4", answer4);
+                    intent.putExtra("answer5", answer5);
+                    intent.putExtra("answer6", answer);
                     startActivity(intent);
                     finish();
-                }*/
-
-                Intent intent = new Intent(getApplicationContext(), Menu2Activity2.class);
-                intent.putExtra("answer1", answer);
-                startActivity(intent);
-                finish();
-
+                }
             }
         });
+
+
     }
 
     public boolean onOptionsItemSelected(MenuItem item){

@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">BLUE_v.4</string>
-    <string name="menu2_title">암호 화폐 지갑</string>
+    <string name="app_name">BLUE_v.6</string>
 
     <string name="menu1_1">본 체크리스트는 경험공학 연구실(EDEN)에서 개발한 블록체인 서비스 UX 가이드라인 중 주요항목을 선별하여 블록체인 서비스의 개발자 또는 운영자가 손쉽게 블록체인 서비스의 UX를 점검해 볼 수 있도록 만든 체크리스트입니다.\n\n체크리스트의 사용 편리성을 위해 일반적인 서비스에는 적용할 수 없는, 블록체인에 특화된 고려사항만을 포함하고 있으므로, UX를 고려한 서비스 설계에 익숙하지 않은 이용자는 일반적인 UX 가이드라인을 함께 고려함으로써 효과를 극대화할 수 있습니다.</string>
     <string name="menu1_411">"<b>"기능 설명: "</b>"암호 화폐 관리를 위한 전자 지갑</string>
@@ -15,6 +14,8 @@
     <string name="menu1_452">"<b>"작업 예시: "</b>"시드 구문을 활용한 계정 복구</string>
     <string name="menu1_461">"<b>"기능 설명: "</b>"저작권의 신원 등을 증명</string>
     <string name="menu1_462">"<b>"작업 예시: "</b>"창작물을 암호화폐와 연동하여 저작권 증명</string>
+
+    <string name="menu3_1">포항공과 대학교 EDEN 연구실은 “Experience Design for All”을 비전으로 삼으며 UI와 UX에 대해 연구하고 있습니다. EDEN 연구실의 대표적인 연구분야는 아래와 같습니다.\nExperience design &amp; management  Experience Creation based on the User Scenario Generation technique\n이번 연구에서는 세계적으로 급격히 발전하고 있는 블록체인 서비스에 대한 UX정의 및 가이드라인 개발 관련 연구를 선도하여, 새로운 분야를 주도적으로 개척하고자 하였습니다. 블록체인 서비스의 UX 개념 모형을 구축하여, 블록체인 기술이 적용된 서비스의 UX를 체계적으로 증대시키는 연구의 기초 토대를 마련한다. 블록체인 기술이 활발히 도입되고 있는 서비스 분야를 포괄하는 UX 설계 가이드라인 및 디자인 라이브러리를 구축하여, 다양한 국내 기업들이 서비스 개발 현장에서 광범위하게 활용 할 수 있도록 하였습니다.\n이 성과는 2021년도 정부(과학기술정보통신부)의 재원으로 한국연구재단의 지원을 받아 수행된 연구임(No.한국연구재단에서 부여한 과제 번호)\n\n연구 담당자: 장혜지(), 권기민(), 신완선(sunnyshin@postech.ac.kr)\n어플제작자 : 조아라(choar816@postech.ac.kr)\n담당 교수님: 한성호()</string>
 
     <string name="question_101">초보 사용자를 위해 지갑 기능에 대한 충분한 가이드를 제공하고 있습니까?</string>
     <string name="question_102">암호 화폐 지갑에서 사용되는 용어와 설명은 비전문가도 쉽게 이해할 수 있는 수준입니까?</string>
@@ -84,72 +85,72 @@
     <string name="question_610">블록체인을 이용하여 자산 또는 정보를 증명하는 방식에 대한 정보를 제공하고 있습니까?</string>
     <string name="question_611">서비스를 통해 증명된 자산에 대한 보호 조치가 적절하게 취해지고 있습니까?</string>
 
-    <string name="answer_101">사용자가 지갑 기능을 쉽게 학습할 수 있도록 해야 한다</string>
-    <string name="answer_102">암호 화폐 지갑 기능에서 사용되는 블록체인 관련 전문용어(해쉬값, 지갑 주소, 홀딩, 블록체인 기록 등)에 대한 설명을 제공한다</string>
-    <string name="answer_103">암호 화폐 지갑은 자주 사용되는 기능이므로 직관적으로 접근이 가능해야 한다</string>
-    <string name="answer_104">암호 화폐 지갑의 화폐 목록에서는 사용자가 원하는 정보가 효율적으로 제공될 수 있도록 설계되어야 한다</string>
-    <string name="answer_105">암호 화폐의 표시 형식은 일관적이어야 하며, 형식으로 인해 생략될 수 있는 정보도 제공되어야 한다</string>
-    <string name="answer_106">사용자가 쉽게 송금이 가능하도록 정보와 방법이 제공되어야 하며, 송금 시 사용되는 암호 화폐의 가치를 사용자가 쉽게 알 수 있도록 해야한다</string>
-    <string name="answer_107">송금 시 수수료가 발생하는 경우 이에 대한 세부적인 정보를 제공해야 한다</string>
-    <string name="answer_108">블록체인에서 사용자의 거래와 활동을 기록할 때 시간이 소요되므로, 관련 정보를 미리 제공해야 한다</string>
-    <string name="answer_109">블록체인 서비스에서 암호 화폐 지갑 주소와 같이 자주 공유할 수 있는 은 정보는 손쉽게 공유할 수 있어야 한다</string>
-    <string name="answer_110">사용자가 보유한 기기 및 타 서비스에서 암호 화폐 지갑을 연동하는 경우에 유연성이 보장되어야 한다</string>
-    <string name="answer_111">사용자의 인증 정도에 따라 지갑 기능 내에서 활용 가능한 기능의 범위를 명확하게 안내해야 한다</string>
+    <string name="answer_101">· 사용자가 지갑 기능을 쉽게 학습할 수 있도록 해야 한다</string>
+    <string name="answer_102">· 암호 화폐 지갑 기능에서 사용되는 블록체인 관련 전문용어(해쉬값, 지갑 주소, 홀딩, 블록체인 기록 등)에 대한 설명을 제공한다</string>
+    <string name="answer_103">· 암호 화폐 지갑은 자주 사용되는 기능이므로 직관적으로 접근이 가능해야 한다</string>
+    <string name="answer_104">· 암호 화폐 지갑의 화폐 목록에서는 사용자가 원하는 정보가 효율적으로 제공될 수 있도록 설계되어야 한다</string>
+    <string name="answer_105">· 암호 화폐의 표시 형식은 일관적이어야 하며, 형식으로 인해 생략될 수 있는 정보도 제공되어야 한다</string>
+    <string name="answer_106">· 사용자가 쉽게 송금이 가능하도록 정보와 방법이 제공되어야 하며, 송금 시 사용되는 암호 화폐의 가치를 사용자가 쉽게 알 수 있도록 해야한다</string>
+    <string name="answer_107">· 송금 시 수수료가 발생하는 경우 이에 대한 세부적인 정보를 제공해야 한다</string>
+    <string name="answer_108">· 블록체인에서 사용자의 거래와 활동을 기록할 때 시간이 소요되므로, 관련 정보를 미리 제공해야 한다</string>
+    <string name="answer_109">· 블록체인 서비스에서 암호 화폐 지갑 주소와 같이 자주 공유할 수 있는 은 정보는 손쉽게 공유할 수 있어야 한다</string>
+    <string name="answer_110">· 사용자가 보유한 기기 및 타 서비스에서 암호 화폐 지갑을 연동하는 경우에 유연성이 보장되어야 한다</string>
+    <string name="answer_111">· 사용자의 인증 정도에 따라 지갑 기능 내에서 활용 가능한 기능의 범위를 명확하게 안내해야 한다</string>
 
-    <string name="answer_201">거래 기능에서 사용되는 용어는 사용자가 쉽게 이해할 수 있도록 해야 한다</string>
-    <string name="answer_202">사용자가 거래를 직관적이고 쉽게 진행할 수 있도록 거래 과정을 설계해야 한다</string>
-    <string name="answer_203">거래 화면을 사용자가 직관적으로 이해할 수 있는 칼라 코딩을 사용해야 한다</string>
-    <string name="answer_204">거래 시 상품 가격의 화폐 가치는 사용자가 유연하게 확인할 수 있어야 한다</string>
-    <string name="answer_205">거래 방법을 유연하게 변경할 수 있어야 하며, 거래 과정에서 환불이나 취소를 진행할 수 있도록 해야 한다</string>
-    <string name="answer_206">거래 시, 상대방의 암호 화폐 지갑 주소를 외우지 않아도 자동으로 입력할 수 있는 기능(ex. 채팅기능과 연동)을 제공하여야 한다</string>
-    <string name="answer_207">거래가 되지 않는 상황(ex. 보유 암호화폐 수량 부족 등)에는 그 이유를 안내해야 한다</string>
-    <string name="answer_208">거래 화면에서 암호 화폐 목록에는 사용자에게 필요한 정보가 우선적으로 제공되어야 한다</string>
-    <string name="answer_209">거래 진행 현황을 사용자가 실시간으로 확인할 수 있어야 하며, 완료된 거래 내역을 사용자가 효과적으로 확인할 수 있도록 해야 한다</string>
-    <string name="answer_210">거래 시 수수료가 발생하는 경우 관련 정보를 제공해야 한다</string>
-    <string name="answer_211">거래 내역이 실시간으로 반영되지 않는 경우에 관련 정보를 제공해야 한다</string>
-    <string name="answer_212">거래 과정에서 오류가 발생한 경우, 사용자가 오류에 대한 정보를 실시간으로 확인할 수 있어야 한다</string>
+    <string name="answer_201">· 거래 기능에서 사용되는 용어는 사용자가 쉽게 이해할 수 있도록 해야 한다</string>
+    <string name="answer_202">· 사용자가 거래를 직관적이고 쉽게 진행할 수 있도록 거래 과정을 설계해야 한다</string>
+    <string name="answer_203">· 거래 화면을 사용자가 직관적으로 이해할 수 있는 칼라 코딩을 사용해야 한다</string>
+    <string name="answer_204">· 거래 시 상품 가격의 화폐 가치는 사용자가 유연하게 확인할 수 있어야 한다</string>
+    <string name="answer_205">· 거래 방법을 유연하게 변경할 수 있어야 하며, 거래 과정에서 환불이나 취소를 진행할 수 있도록 해야 한다</string>
+    <string name="answer_206">· 거래 시, 상대방의 암호 화폐 지갑 주소를 외우지 않아도 자동으로 입력할 수 있는 기능(ex. 채팅기능과 연동)을 제공하여야 한다</string>
+    <string name="answer_207">· 거래가 되지 않는 상황(ex. 보유 암호화폐 수량 부족 등)에는 그 이유를 안내해야 한다</string>
+    <string name="answer_208">· 거래 화면에서 암호 화폐 목록에는 사용자에게 필요한 정보가 우선적으로 제공되어야 한다</string>
+    <string name="answer_209">· 거래 진행 현황을 사용자가 실시간으로 확인할 수 있어야 하며, 완료된 거래 내역을 사용자가 효과적으로 확인할 수 있도록 해야 한다</string>
+    <string name="answer_210">· 거래 시 수수료가 발생하는 경우 관련 정보를 제공해야 한다</string>
+    <string name="answer_211">· 거래 내역이 실시간으로 반영되지 않는 경우에 관련 정보를 제공해야 한다</string>
+    <string name="answer_212">· 거래 과정에서 오류가 발생한 경우, 사용자가 오류에 대한 정보를 실시간으로 확인할 수 있어야 한다</string>
 
-    <string name="answer_301">블록체인에 대한 전문적인 지식이 없어도 보상을 위한 활동을 할수 있도록 쉬운 용어를 사용해야 한다</string>
-    <string name="answer_302">블록체인 서비스에서 보상을 획득할 수 있는 방법을 유연하게 제공해야 한다</string>
-    <string name="answer_303">사용자가 꾸준히 서비스를 사용할 수 있도록 유인 역할을 하는 보상이 필요하다</string>
-    <string name="answer_304">서비스가 사용자의 특정 행동을 유도할 때는 사용자의 서비스 이용을 방해하지 않도록 해야 한다</string>
-    <string name="answer_305">블록체인 서비스에서 보상을 획득하는 이유가 정당해야 한다</string>
-    <string name="answer_306">보상 획득 활동과 관련된 세부적인 정보를 제공하야 한다</string>
-    <string name="answer_307">사용자가 보상을 획득하기 위한 과정이 간단해야 하며, 보상 획득 활동을 쉽게 배우고 진행할 수 있어야 한다</string>
-    <string name="answer_308">사용자가 보상을 부당한 방법으로 획득하지 못하도록 설계해야 한다</string>
-    <string name="answer_309">블록체인 서비스에서 획득한 보상을 실제로 사용할 수 있어야 한다</string>
-    <string name="answer_310">사용자가 보상과 관련된 활동을 한 경우 이에 대한 피드백을 제공해야 한다</string>
-    <string name="answer_311">획득한 보상과 관련된 세부 정보를 제공해야 한다</string>
-    <string name="answer_312">보상을 받는 과정에서 오류가 발생하지 않도록 해야하며, 오류가 발생했을 경우 대처방안을 마련해야 한다</string>
+    <string name="answer_301">· 블록체인에 대한 전문적인 지식이 없어도 보상을 위한 활동을 할수 있도록 쉬운 용어를 사용해야 한다</string>
+    <string name="answer_302">· 블록체인 서비스에서 보상을 획득할 수 있는 방법을 유연하게 제공해야 한다</string>
+    <string name="answer_303">· 사용자가 꾸준히 서비스를 사용할 수 있도록 유인 역할을 하는 보상이 필요하다</string>
+    <string name="answer_304">· 서비스가 사용자의 특정 행동을 유도할 때는 사용자의 서비스 이용을 방해하지 않도록 해야 한다</string>
+    <string name="answer_305">· 블록체인 서비스에서 보상을 획득하는 이유가 정당해야 한다</string>
+    <string name="answer_306">· 보상 획득 활동과 관련된 세부적인 정보를 제공하야 한다</string>
+    <string name="answer_307">· 사용자가 보상을 획득하기 위한 과정이 간단해야 하며, 보상 획득 활동을 쉽게 배우고 진행할 수 있어야 한다</string>
+    <string name="answer_308">· 사용자가 보상을 부당한 방법으로 획득하지 못하도록 설계해야 한다</string>
+    <string name="answer_309">· 블록체인 서비스에서 획득한 보상을 실제로 사용할 수 있어야 한다</string>
+    <string name="answer_310">· 사용자가 보상과 관련된 활동을 한 경우 이에 대한 피드백을 제공해야 한다</string>
+    <string name="answer_311">· 획득한 보상과 관련된 세부 정보를 제공해야 한다</string>
+    <string name="answer_312">· 보상을 받는 과정에서 오류가 발생하지 않도록 해야하며, 오류가 발생했을 경우 대처방안을 마련해야 한다</string>
 
-    <string name="answer_401">타 서비스와 차별화되는 큐레이팅 기능을 제공해야 한다</string>
-    <string name="answer_402">큐레이팅 기능을 처음 접하는 사용자들도 쉽게 기능을 사용할 수 있도록 해야 한다</string>
-    <string name="answer_403">사용자가 큐레이팅으로 타 사용자와 교류할 수 있어야 한다</string>
-    <string name="answer_404">큐레이팅의 결과로 얻은 암호 화폐나 토큰을 활용할 수 있는 방법을 안내해야 한다</string>
-    <string name="answer_405">보상을 노린 무분별한 큐레이팅을 방지할 수 있도록 블록체인 서비스를 설계하여야 한다</string>
-    <string name="answer_406">큐레이팅 활동에 자원이 소모되는 경우, 관련된 정보를 적절하게 제공해야 한다</string>
-    <string name="answer_407">큐레이팅에 암호 화폐, 투표권 등의 자원이 소모되는 경우, 소모할 양을 사용자가 설정할 수 있도록 한다</string>
-    <string name="answer_408">사용자의 큐레이팅 활동에 대한 결과를 적절하게 제공해야 한다</string>
+    <string name="answer_401">· 타 서비스와 차별화되는 큐레이팅 기능을 제공해야 한다</string>
+    <string name="answer_402">· 큐레이팅 기능을 처음 접하는 사용자들도 쉽게 기능을 사용할 수 있도록 해야 한다</string>
+    <string name="answer_403">· 사용자가 큐레이팅으로 타 사용자와 교류할 수 있어야 한다</string>
+    <string name="answer_404">· 큐레이팅의 결과로 얻은 암호 화폐나 토큰을 활용할 수 있는 방법을 안내해야 한다</string>
+    <string name="answer_405">· 보상을 노린 무분별한 큐레이팅을 방지할 수 있도록 블록체인 서비스를 설계하여야 한다</string>
+    <string name="answer_406">· 큐레이팅 활동에 자원이 소모되는 경우, 관련된 정보를 적절하게 제공해야 한다</string>
+    <string name="answer_407">· 큐레이팅에 암호 화폐, 투표권 등의 자원이 소모되는 경우, 소모할 양을 사용자가 설정할 수 있도록 한다</string>
+    <string name="answer_408">· 사용자의 큐레이팅 활동에 대한 결과를 적절하게 제공해야 한다</string>
 
-    <string name="answer_501">블록체인 서비스의 보안 기능에 대한 정보를 제공함으로써 보안 기능에 대한 사용자의 이해를 높여야 한다</string>
-    <string name="answer_502">블록체인 서비스의 보안 기능은 사용자가 익숙한 방식으로 진행할 수 있어야 한다</string>
-    <string name="answer_503">블록체인 서비스에서 사용자가 거래를 진행하는 동안 보안 상태를 인지할 수 있어야 한다</string>
-    <string name="answer_504">블록체인 서비스의 보안 기능은 보안 유지에 필수적인 정보만을 요구해야 한다</string>
-    <string name="answer_505">지갑 복구에 사용되는 보안 방식인 시드 구문을 지갑 생성 당시에만 확인하게 하지 않고 이후에도 서비스 내에서 재확인 할 수 있게 한다</string>
-    <string name="answer_506">시드 구문 또는 recovery code를 활용하기 용이하도록 설계해야 한다</string>
-    <string name="answer_507">블록체인 서비스 내에서 보안을 위협할 수 있는 부적절한 컨텐츠를 검열해야 한다</string>
-    <string name="answer_508">블록체인 서비스의 보안 기능은 원활하게 제공되며 안전하다고 인지되어야 한다</string>
+    <string name="answer_501">· 블록체인 서비스의 보안 기능에 대한 정보를 제공함으로써 보안 기능에 대한 사용자의 이해를 높여야 한다</string>
+    <string name="answer_502">· 블록체인 서비스의 보안 기능은 사용자가 익숙한 방식으로 진행할 수 있어야 한다</string>
+    <string name="answer_503">· 블록체인 서비스에서 사용자가 거래를 진행하는 동안 보안 상태를 인지할 수 있어야 한다</string>
+    <string name="answer_504">· 블록체인 서비스의 보안 기능은 보안 유지에 필수적인 정보만을 요구해야 한다</string>
+    <string name="answer_505">· 지갑 복구에 사용되는 보안 방식인 시드 구문을 지갑 생성 당시에만 확인하게 하지 않고 이후에도 서비스 내에서 재확인 할 수 있게 한다</string>
+    <string name="answer_506">· 시드 구문 또는 recovery code를 활용하기 용이하도록 설계해야 한다</string>
+    <string name="answer_507">· 블록체인 서비스 내에서 보안을 위협할 수 있는 부적절한 컨텐츠를 검열해야 한다</string>
+    <string name="answer_508">· 블록체인 서비스의 보안 기능은 원활하게 제공되며 안전하다고 인지되어야 한다</string>
 
-    <string name="answer_601">사용자 증명 과정은 빠르게 진행될 수 있도록 설계해야 한다</string>
-    <string name="answer_602">사용자 증명 과정을 쉽게 진행할 수 있도록 해야 한다</string>
-    <string name="answer_603">사용자 증명 과정을 사용자가 원하는 방법으로 유연하게 진행할 수 있어야 한다</string>
-    <string name="answer_604">사용자 증명 시에는 필수적인 정보만을 요구해야 한다</string>
-    <string name="answer_605">사용자 증명 내역에 대한 접근성을 높여 서비스의 보안에 대한 신뢰를 높일 수 있다</string>
-    <string name="answer_606">서비스 사용을 위해 사용자 증명을 진행한 후에는 사용자가 어떤 계정(지갑 주소)으로 사용자 증명을 진행했는지 쉽게 알 수 있도록 한다</string>
-    <string name="answer_607">사용자 증명 과정은 사용자들에게 민감하게 받아들여지므로, 작업 도중에 시스템 오류가 발생하는 경우 발생 원인과 해결 방법을 알 수 있도록 한다</string>
-    <string name="answer_608">사용자의 요구에 따라 사용자 증명 과정을 추가할 수 있어야 한다</string>
-    <string name="answer_609">타 사용자가 신원이 증명된 사용자인지 확인할 수 있는 기능을 제공한다</string>
-    <string name="answer_610">블록체인을 이용하여 자산, 정보를 증명하는 방식은 대부분의 사용자에게 익숙하지 않으므로, 관련 정보를 안내해야 한다</string>
-    <string name="answer_611">블록체인을 활용한 증명 기능을 통해 사용자의 재산을 보호해야 한다</string>
+    <string name="answer_601">· 사용자 증명 과정은 빠르게 진행될 수 있도록 설계해야 한다</string>
+    <string name="answer_602">· 사용자 증명 과정을 쉽게 진행할 수 있도록 해야 한다</string>
+    <string name="answer_603">· 사용자 증명 과정을 사용자가 원하는 방법으로 유연하게 진행할 수 있어야 한다</string>
+    <string name="answer_604">· 사용자 증명 시에는 필수적인 정보만을 요구해야 한다</string>
+    <string name="answer_605">· 사용자 증명 내역에 대한 접근성을 높여 서비스의 보안에 대한 신뢰를 높일 수 있다</string>
+    <string name="answer_606">· 서비스 사용을 위해 사용자 증명을 진행한 후에는 사용자가 어떤 계정(지갑 주소)으로 사용자 증명을 진행했는지 쉽게 알 수 있도록 한다</string>
+    <string name="answer_607">· 사용자 증명 과정은 사용자들에게 민감하게 받아들여지므로, 작업 도중에 시스템 오류가 발생하는 경우 발생 원인과 해결 방법을 알 수 있도록 한다</string>
+    <string name="answer_608">· 사용자의 요구에 따라 사용자 증명 과정을 추가할 수 있어야 한다</string>
+    <string name="answer_609">· 타 사용자가 신원이 증명된 사용자인지 확인할 수 있는 기능을 제공한다</string>
+    <string name="answer_610">· 블록체인을 이용하여 자산, 정보를 증명하는 방식은 대부분의 사용자에게 익숙하지 않으므로, 관련 정보를 안내해야 한다</string>
+    <string name="answer_611">· 블록체인을 활용한 증명 기능을 통해 사용자의 재산을 보호해야 한다</string>
 
 </resources>

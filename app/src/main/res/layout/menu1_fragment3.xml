@@ -32,7 +32,7 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginBottom="20dp"
                 android:text="암호 화폐 지갑"
-                android:textSize="24dp"
+                android:textSize="18dp"
                 android:textAlignment="center"
                 android:gravity="center_horizontal" />
 
@@ -62,7 +62,7 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginBottom="20dp"
                 android:text="거래"
-                android:textSize="24dp"
+                android:textSize="18dp"
                 android:textAlignment="center"
                 android:gravity="center_horizontal" />
 
@@ -94,7 +94,7 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginBottom="20dp"
                 android:text="보상"
-                android:textSize="24dp"
+                android:textSize="18dp"
                 android:textAlignment="center"
                 android:gravity="center_horizontal" />
 
@@ -125,7 +125,7 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginBottom="20dp"
                 android:text="큐레이팅"
-                android:textSize="24dp"
+                android:textSize="18dp"
                 android:textAlignment="center"
                 android:gravity="center_horizontal" />
 
@@ -156,7 +156,7 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginBottom="20dp"
                 android:text="보안"
-                android:textSize="24dp"
+                android:textSize="18dp"
                 android:textAlignment="center"
                 android:gravity="center_horizontal" />
 
@@ -185,7 +185,7 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginBottom="20dp"
                 android:text="증명"
-                android:textSize="24dp"
+                android:textSize="18dp"
                 android:textAlignment="center"
                 android:gravity="center_horizontal" />
 

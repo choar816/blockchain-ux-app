@@ -34,4 +34,44 @@
         <item name="android:backgroundDimEnabled">true</item>
     </style>
 
+    <style name="radio3_style" parent="Base.Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/radio3_button</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="radio4_style" parent="Base.Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/radio4_button</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="radio5_style" parent="Base.Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/radio5_button</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="radio6_style" parent="Base.Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/radio6_button</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
 </resources>

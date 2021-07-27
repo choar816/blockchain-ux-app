@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Menu2Activity.class);
+                Intent intent = new Intent(getApplicationContext(), Menu2Activity1.class);
                 startActivity(intent);
             }
         });

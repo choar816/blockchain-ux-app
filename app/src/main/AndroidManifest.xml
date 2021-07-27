@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BLUE">
-        <activity android:name=".Menu2Activity1"></activity>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +22,12 @@
         <activity
             android:name=".Menu1Activity"
             android:hardwareAccelerated="false" />
-        <activity android:name=".Menu2Activity" />
+        <activity android:name=".Menu2Activity1"/>
+        <activity android:name=".Menu2Activity2"/>
+        <activity android:name=".Menu2Activity3"/>
+        <activity android:name=".Menu2Activity4"/>
+        <activity android:name=".Menu2Activity5"/>
+        <activity android:name=".Menu2Activity6"/>
         <activity android:name=".Menu2Result" />
         <activity android:name=".Menu3Activity" />
     </application>
