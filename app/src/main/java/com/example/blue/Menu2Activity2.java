@@ -242,7 +242,6 @@ public class Menu2Activity2 extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if (rg01.getCheckedRadioButtonId() == -1 || rg02.getCheckedRadioButtonId() == -1 ||
                         rg03.getCheckedRadioButtonId() == -1 || rg04.getCheckedRadioButtonId() == -1 ||
                         rg05.getCheckedRadioButtonId() == -1 || rg06.getCheckedRadioButtonId() == -1 ||
@@ -257,6 +256,7 @@ public class Menu2Activity2 extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 }
+
             }
         });
 

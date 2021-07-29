@@ -20,55 +20,64 @@
         android:text="보안"/>
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/checklist"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:src="@drawable/checklist3"
         android:padding="8dp"/>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="24dp"
+            android:gravity="center"
+            android:padding="16dp"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/question_501"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/question_501"/>
+                android:text="@string/question_501" />
 
             <RadioGroup
                 android:id="@+id/rg_501"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
                 android:orientation="horizontal"
                 android:gravity="center">
 
-                <RadioButton
-                    android:id="@+id/radio_501a"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio1_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_501b"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio2_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_501c"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio3_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_501d"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio4_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_501e"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio5_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_501f"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio6_style"
+                    android:layout_marginLeft="18dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </RadioGroup>
@@ -84,35 +93,41 @@
                 android:id="@+id/rg_502"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
                 android:orientation="horizontal"
                 android:gravity="center">
 
-                <RadioButton
-                    android:id="@+id/radio_502a"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio1_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_502b"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio2_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_502c"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio3_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_502d"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio4_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_502e"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio5_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_502f"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio6_style"
+                    android:layout_marginLeft="18dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </RadioGroup>
-
 
             <TextView
                 android:id="@+id/question_503"
@@ -125,31 +140,38 @@
                 android:id="@+id/rg_503"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
                 android:orientation="horizontal"
                 android:gravity="center">
 
-                <RadioButton
-                    android:id="@+id/radio_503a"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio1_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_503b"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio2_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_503c"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio3_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_503d"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio4_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_503e"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio5_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_503f"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio6_style"
+                    android:layout_marginLeft="18dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </RadioGroup>
@@ -165,31 +187,38 @@
                 android:id="@+id/rg_504"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
                 android:orientation="horizontal"
                 android:gravity="center">
 
-                <RadioButton
-                    android:id="@+id/radio_504a"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio1_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_504b"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio2_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_504c"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio3_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_504d"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio4_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_504e"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio5_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_504f"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio6_style"
+                    android:layout_marginLeft="18dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </RadioGroup>
@@ -205,31 +234,38 @@
                 android:id="@+id/rg_505"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
                 android:orientation="horizontal"
                 android:gravity="center">
 
-                <RadioButton
-                    android:id="@+id/radio_505a"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio1_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_505b"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio2_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_505c"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio3_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_505d"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio4_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_505e"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio5_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_505f"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio6_style"
+                    android:layout_marginLeft="18dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </RadioGroup>
@@ -245,31 +281,40 @@
                 android:id="@+id/rg_506"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
                 android:orientation="horizontal"
                 android:gravity="center">
 
-                <RadioButton
-                    android:id="@+id/radio_506a"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio1_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_506b"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio2_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_506c"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio3_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_506d"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio4_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_506e"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radio_206e"
+                    style="@style/radio5_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_506f"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radio_206f"
+                    style="@style/radio6_style"
+                    android:layout_marginLeft="18dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </RadioGroup>
@@ -285,31 +330,38 @@
                 android:id="@+id/rg_507"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
                 android:orientation="horizontal"
                 android:gravity="center">
 
-                <RadioButton
-                    android:id="@+id/radio_507a"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio1_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_507b"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio2_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_507c"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio3_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_507d"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio4_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_507e"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio5_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_507f"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio6_style"
+                    android:layout_marginLeft="18dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </RadioGroup>
@@ -325,31 +377,38 @@
                 android:id="@+id/rg_508"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
                 android:orientation="horizontal"
                 android:gravity="center">
 
-                <RadioButton
-                    android:id="@+id/radio_508a"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio1_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_508b"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio2_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_508c"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio3_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_508d"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio4_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_508e"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio5_style"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/radio_508f"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    style="@style/radio6_style"
+                    android:layout_marginLeft="18dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </RadioGroup>

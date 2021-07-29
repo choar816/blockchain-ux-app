@@ -42,6 +42,7 @@ import java.util.Date;
 import java.util.Random;
 
 import butterknife.BindView;
+import butterknife.internal.Utils;
 
 public class Menu2Result extends AppCompatActivity {
     Button save;
@@ -503,7 +504,8 @@ public class Menu2Result extends AppCompatActivity {
             ++numTrue6;
         } else {
             a604.setVisibility(View.GONE);
-        }if (bool6[4] == true) {
+        }
+        if (bool6[4] == true) {
             a605.setVisibility(View.VISIBLE);
             ++numTrue6;
         } else {
@@ -572,9 +574,6 @@ public class Menu2Result extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 screenshot(getWindow().getDecorView().getRootView(), "result");
-                //print();
-                //print(getWindow().getDecorView().getRootView());
-                //print((View)findViewById(R.id.scrollView));
 
                 Toast.makeText(getApplicationContext(), "사진 앨범에 저장되었습니다.", Toast.LENGTH_SHORT).show();
             }
@@ -596,40 +595,6 @@ public class Menu2Result extends AppCompatActivity {
     }
 
 
-    private void print(View view){
-        Bitmap bitmap = getBitmapFromView(view, view.getHeight(), view.getWidth());
-        try {
-            File defaultFile = new File(Environment.getExternalStorageDirectory().getAbsolutePath());
-            if (!defaultFile.exists())
-                defaultFile.mkdirs();
-
-            String filename = "UX guide";
-            File file = new File(defaultFile,filename);
-            if (file.exists()) {
-                file.delete();
-                file = new File(defaultFile,filename);
-            }
-            FileOutputStream output = new FileOutputStream(file);
-            bitmap.compress(Bitmap.CompressFormat.PNG, 100, output);
-            output.flush();
-            output.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    //create bitmap from the view
-    private Bitmap getBitmapFromView(View view,int height,int width) {
-        Bitmap bitmap = Bitmap.createBitmap(width, height,Bitmap.Config.ARGB_8888);
-        Canvas canvas = new Canvas(bitmap);
-        Drawable bgDrawable = view.getBackground();
-        if (bgDrawable!=null)
-            bgDrawable.draw(canvas);
-        else
-            canvas.drawColor(Color.WHITE);
-        view.draw(canvas);
-        return bitmap;
-    }
 
     protected static File screenshot(View view, String filename) {
         Date date = new Date();
@@ -638,7 +603,7 @@ public class Menu2Result extends AppCompatActivity {
         CharSequence format = android.text.format.DateFormat.format("yyyy-MM-dd_hh:mm:ss", date);
         try {
             // Initialising the directory of storage
-            String dirpath = Environment.getExternalStorageDirectory() + "";
+            String dirpath = Environment.getExternalStorageDirectory() + "/BUX";
             File file = new File(dirpath);
             if (!file.exists()) {
                 boolean mkdir = file.mkdir();

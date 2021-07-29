@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id="@+id/view_result"
     tools:context=".Menu2Result">
     <ScrollView
         android:id="@+id/scrollView"
@@ -16,16 +17,17 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/background_text"
-        android:padding="8dp"
-        android:layout_gravity="center"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        android:textSize="24dp"
-        android:text="UX 향상을 위해 필요한 가이드"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_text"
+                    android:padding="8dp"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="24dp"
+                    android:text="UX 향상을 위해 필요한 가이드"/>
+
 
     <TextView
         android:id="@+id/answer_1"
@@ -625,6 +627,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_gravity="center"
+        android:backgroundTint="@color/navy_4"
         android:textAlignment="center"
         android:text="가이드 저장하기"/>
 
