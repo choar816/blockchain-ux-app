@@ -684,7 +684,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/gray_3"
-                    android:text="이전" />
+                    android:text="&lt; 이전" />
 
                 <LinearLayout
                     android:layout_width="45dp"
@@ -696,7 +696,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/navy_1"
-                    android:text="다음" />
+                    android:text="다음 &gt;" />
             </LinearLayout>
 
         </LinearLayout>

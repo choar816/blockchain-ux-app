@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BLUE_v.6</string>
+    <string name="app_name">BLUE_v.7</string>
 
     <string name="menu1_1">본 체크리스트는 경험공학 연구실(EDEN)에서 개발한 블록체인 서비스 UX 가이드라인 중 주요항목을 선별하여 블록체인 서비스의 개발자 또는 운영자가 손쉽게 블록체인 서비스의 UX를 점검해 볼 수 있도록 만든 체크리스트입니다.\n\n체크리스트의 사용 편리성을 위해 일반적인 서비스에는 적용할 수 없는, 블록체인에 특화된 고려사항만을 포함하고 있으므로, UX를 고려한 서비스 설계에 익숙하지 않은 이용자는 일반적인 UX 가이드라인을 함께 고려함으로써 효과를 극대화할 수 있습니다.</string>
     <string name="menu1_411">"<b>"기능 설명: "</b>"암호 화폐 관리를 위한 전자 지갑</string>
@@ -15,7 +15,12 @@
     <string name="menu1_461">"<b>"기능 설명: "</b>"저작권의 신원 등을 증명</string>
     <string name="menu1_462">"<b>"작업 예시: "</b>"창작물을 암호화폐와 연동하여 저작권 증명</string>
 
-    <string name="menu3_1">포항공과 대학교 EDEN 연구실은 “Experience Design for All”을 비전으로 삼으며 UI와 UX에 대해 연구하고 있습니다. EDEN 연구실의 대표적인 연구분야는 아래와 같습니다.\nExperience design &amp; management  Experience Creation based on the User Scenario Generation technique\n이번 연구에서는 세계적으로 급격히 발전하고 있는 블록체인 서비스에 대한 UX정의 및 가이드라인 개발 관련 연구를 선도하여, 새로운 분야를 주도적으로 개척하고자 하였습니다. 블록체인 서비스의 UX 개념 모형을 구축하여, 블록체인 기술이 적용된 서비스의 UX를 체계적으로 증대시키는 연구의 기초 토대를 마련한다. 블록체인 기술이 활발히 도입되고 있는 서비스 분야를 포괄하는 UX 설계 가이드라인 및 디자인 라이브러리를 구축하여, 다양한 국내 기업들이 서비스 개발 현장에서 광범위하게 활용 할 수 있도록 하였습니다.\n이 성과는 2021년도 정부(과학기술정보통신부)의 재원으로 한국연구재단의 지원을 받아 수행된 연구임(No.한국연구재단에서 부여한 과제 번호)\n\n연구 담당자: 장혜지(), 권기민(), 신완선(sunnyshin@postech.ac.kr)\n어플제작자 : 조아라(choar816@postech.ac.kr)\n담당 교수님: 한성호()</string>
+    <string name="menu3_1">POSTECH EDEN Lab.</string>
+    <string name="menu3_2">포항공과 대학교 EDEN 연구실은 “Experience Design for All”을 비전으로 삼으며 UI와 UX에 대해 연구하고 있습니다. 본 어플리케이션은 한국연구재단의 지원을 받아 수행된 연구 결과입니다. (2019R1A2C1086366)</string>
+    <string name="menu3_3">"<b>"연구실 웹사이트"</b>":\nhttp://www.eden.postech.ac.kr/</string>
+    <string name="menu3_4">"<b>"연구 담당자"</b>":\n장혜지(wdfokj@postech.ac.kr)\n권기민(kkmnin@postech.ac.kr)\n신완선(sunnyshin@postech.ac.kr)</string>
+    <string name="menu3_5">"<b>"어플 제작자"</b>":\n조아라(choar816@postech.ac.kr)</string>
+    <string name="menu3_6">"<b>"연구 책임자"</b>":\n한성호(shan@postech.edu)</string>
 
     <string name="question_101">초보 사용자를 위해 지갑 기능에 대한 충분한 가이드를 제공하고 있습니까?</string>
     <string name="question_102">암호 화폐 지갑에서 사용되는 용어와 설명은 비전문가도 쉽게 이해할 수 있는 수준입니까?</string>

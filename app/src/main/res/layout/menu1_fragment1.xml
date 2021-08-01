@@ -26,7 +26,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/background_text"
-                android:justificationMode="inter_word"
                 android:padding="16dp"
                 android:textSize="16dp"
                 android:text="@string/menu1_1"/>
