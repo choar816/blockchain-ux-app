@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -13,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 public class Menu2Activity3 extends AppCompatActivity {
+    int num_unchecked;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,211 +25,77 @@ public class Menu2Activity3 extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("체크리스트");
 
+        RadioGroup groups[] = new RadioGroup[12];
+        groups[0] = (RadioGroup) findViewById(R.id.rg_301);
+        groups[1] = (RadioGroup) findViewById(R.id.rg_302);
+        groups[2] = (RadioGroup) findViewById(R.id.rg_303);
+        groups[3] = (RadioGroup) findViewById(R.id.rg_304);
+        groups[4] = (RadioGroup) findViewById(R.id.rg_305);
+        groups[5] = (RadioGroup) findViewById(R.id.rg_306);
+        groups[6] = (RadioGroup) findViewById(R.id.rg_307);
+        groups[7] = (RadioGroup) findViewById(R.id.rg_308);
+        groups[8] = (RadioGroup) findViewById(R.id.rg_309);
+        groups[9] = (RadioGroup) findViewById(R.id.rg_310);
+        groups[10] = (RadioGroup) findViewById(R.id.rg_311);
+        groups[11] = (RadioGroup) findViewById(R.id.rg_312);
+
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
         boolean[] answer1 = bundle.getBooleanArray("answer1");
         boolean[] answer2 = bundle.getBooleanArray("answer2");
 
-
         boolean answer[] = new boolean[12];
-
         for (int i=0; i<12; ++i) {
             answer[i] = false;
         }
 
-        RadioGroup rg01 = (RadioGroup) findViewById(R.id.rg_301);
-        RadioGroup rg02 = (RadioGroup) findViewById(R.id.rg_302);
-        RadioGroup rg03 = (RadioGroup) findViewById(R.id.rg_303);
-        RadioGroup rg04 = (RadioGroup) findViewById(R.id.rg_304);
-        RadioGroup rg05 = (RadioGroup) findViewById(R.id.rg_305);
-        RadioGroup rg06 = (RadioGroup) findViewById(R.id.rg_306);
-        RadioGroup rg07 = (RadioGroup) findViewById(R.id.rg_307);
-        RadioGroup rg08 = (RadioGroup) findViewById(R.id.rg_308);
-        RadioGroup rg09 = (RadioGroup) findViewById(R.id.rg_309);
-        RadioGroup rg10 = (RadioGroup) findViewById(R.id.rg_310);
-        RadioGroup rg11 = (RadioGroup) findViewById(R.id.rg_311);
-        RadioGroup rg12 = (RadioGroup) findViewById(R.id.rg_312);
-
-        TextView q01 = (TextView) findViewById(R.id.question_301);
-        TextView q02 = (TextView) findViewById(R.id.question_302);
-        TextView q03 = (TextView) findViewById(R.id.question_303);
-        TextView q04 = (TextView) findViewById(R.id.question_304);
-        TextView q05 = (TextView) findViewById(R.id.question_305);
-        TextView q06 = (TextView) findViewById(R.id.question_306);
-        TextView q07 = (TextView) findViewById(R.id.question_307);
-        TextView q08 = (TextView) findViewById(R.id.question_308);
-        TextView q09 = (TextView) findViewById(R.id.question_309);
-        TextView q10 = (TextView) findViewById(R.id.question_310);
-        TextView q11 = (TextView) findViewById(R.id.question_311);
-        TextView q12 = (TextView) findViewById(R.id.question_312);
-
-        rg01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        CheckBox checkBox = (CheckBox) findViewById(R.id.checkbox3);
+        checkBox.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                int index = group.indexOfChild(group.findViewById(checkedId));
-                if (index == 5) {
-                    q01.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOmitted));
-                } else {
-                    q01.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOriginal));
+            public void onClick(View v) {
+                for (int i=0; i<groups.length; ++i) {
+                    groups[i].check(groups[i].getChildAt(5).getId());
                 }
 
-                answer[0] = (index == 0 || index == 1);
+                Intent intent = new Intent(getApplicationContext(), Menu2Activity4.class);
+                intent.putExtra("answer1", answer1);
+                intent.putExtra("answer2", answer2);
+                intent.putExtra("answer3", answer);
+                startActivity(intent);
+                finish();
             }
         });
 
-        rg02.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                int index = group.indexOfChild(group.findViewById(checkedId));
-                if (index == 5) {
-                    q02.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOmitted));
-                } else {
-                    q02.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOriginal));
+        TextView texts[] = new TextView[12];
+        texts[0] = (TextView) findViewById(R.id.question_301);
+        texts[1] = (TextView) findViewById(R.id.question_302);
+        texts[2] = (TextView) findViewById(R.id.question_303);
+        texts[3] = (TextView) findViewById(R.id.question_304);
+        texts[4] = (TextView) findViewById(R.id.question_305);
+        texts[5] = (TextView) findViewById(R.id.question_306);
+        texts[6] = (TextView) findViewById(R.id.question_307);
+        texts[7] = (TextView) findViewById(R.id.question_308);
+        texts[8] = (TextView) findViewById(R.id.question_309);
+        texts[9] = (TextView) findViewById(R.id.question_310);
+        texts[10] = (TextView) findViewById(R.id.question_311);
+        texts[11] = (TextView) findViewById(R.id.question_312);
+
+        for (int i=0; i<groups.length; ++i) {
+            int finalI = i;
+            groups[i].setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup group, int checkedId) {
+                    int index = group.indexOfChild(group.findViewById(checkedId));
+                    if (index == 5) {
+                        texts[finalI].setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOmitted));
+                    } else {
+                        texts[finalI].setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOriginal));
+                    }
+                    answer[finalI] = (index == 0 || index == 1);
                 }
+            });
+        }
 
-                answer[1] = (index == 0 || index == 1);
-            }
-        });
-
-        rg03.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                int index = group.indexOfChild(group.findViewById(checkedId));
-                if (index == 5) {
-                    q03.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOmitted));
-                } else {
-                    q03.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOriginal));
-                }
-
-                answer[2] = (index == 0 || index == 1);
-            }
-        });
-
-        rg04.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                int index = group.indexOfChild(group.findViewById(checkedId));
-                if (index == 5) {
-                    q04.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOmitted));
-                } else {
-                    q04.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOriginal));
-                }
-
-                answer[3] = (index == 0 || index == 1);
-            }
-        });
-
-        rg05.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                int index = group.indexOfChild(group.findViewById(checkedId));
-                if (index == 5) {
-                    q05.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOmitted));
-                } else {
-                    q05.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOriginal));
-                }
-
-                answer[4] = (index == 0 || index == 1);
-            }
-        });
-
-        rg06.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                int index = group.indexOfChild(group.findViewById(checkedId));
-                if (index == 5) {
-                    q06.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOmitted));
-                } else {
-                    q06.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOriginal));
-                }
-
-                answer[5] = (index == 0 || index == 1);
-            }
-        });
-
-        rg07.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                int index = group.indexOfChild(group.findViewById(checkedId));
-                if (index == 5) {
-                    q07.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOmitted));
-                } else {
-                    q07.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOriginal));
-                }
-
-                answer[6] = (index == 0 || index == 1);
-            }
-        });
-
-        rg08.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                int index = group.indexOfChild(group.findViewById(checkedId));
-                if (index == 5) {
-                    q08.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOmitted));
-                } else {
-                    q08.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOriginal));
-                }
-
-                answer[7] = (index == 0 || index == 1);
-            }
-        });
-
-        rg09.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                int index = group.indexOfChild(group.findViewById(checkedId));
-                if (index == 5) {
-                    q09.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOmitted));
-                } else {
-                    q09.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOriginal));
-                }
-
-                answer[8] = (index == 0 || index == 1);
-            }
-        });
-
-        rg10.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                int index = group.indexOfChild(group.findViewById(checkedId));
-                if (index == 5) {
-                    q10.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOmitted));
-                } else {
-                    q10.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOriginal));
-                }
-
-                answer[9] = (index == 0 || index == 1);
-            }
-        });
-
-        rg11.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                int index = group.indexOfChild(group.findViewById(checkedId));
-                if (index == 5) {
-                    q11.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOmitted));
-                } else {
-                    q11.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOriginal));
-                }
-
-                answer[10] = (index == 0 || index == 1);
-            }
-        });
-
-        rg12.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                int index = group.indexOfChild(group.findViewById(checkedId));
-                if (index == 5) {
-                    q12.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOmitted));
-                } else {
-                    q12.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOriginal));
-                }
-
-                answer[11] = (index == 0 || index == 1);
-            }
-        });
 
 
         Button prev = (Button) findViewById(R.id.btn3_prev);
@@ -236,6 +104,7 @@ public class Menu2Activity3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Menu2Activity2.class);
+                intent.putExtra("answer1", answer1);
                 startActivity(intent);
                 finish();
             }
@@ -243,12 +112,14 @@ public class Menu2Activity3 extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (rg01.getCheckedRadioButtonId() == -1 || rg02.getCheckedRadioButtonId() == -1 ||
-                        rg03.getCheckedRadioButtonId() == -1 || rg04.getCheckedRadioButtonId() == -1 ||
-                        rg05.getCheckedRadioButtonId() == -1 || rg06.getCheckedRadioButtonId() == -1 ||
-                        rg07.getCheckedRadioButtonId() == -1 || rg08.getCheckedRadioButtonId() == -1 ||
-                        rg09.getCheckedRadioButtonId() == -1 || rg10.getCheckedRadioButtonId() == -1 ||
-                        rg11.getCheckedRadioButtonId() == -1 || rg12.getCheckedRadioButtonId() == -1) {
+                num_unchecked = 0;
+                for (int i=0; i<groups.length; ++i) {
+                    if (groups[i].getCheckedRadioButtonId() == -1) {
+                        ++num_unchecked;
+                    }
+                }
+
+                if (num_unchecked != 0) {
                     Toast.makeText(getApplicationContext(), "모든 항목을 선택하세요", Toast.LENGTH_SHORT).show();
                 } else {
                     Intent intent = new Intent(getApplicationContext(), Menu2Activity4.class);

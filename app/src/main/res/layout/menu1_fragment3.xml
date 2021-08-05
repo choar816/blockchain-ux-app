@@ -43,7 +43,7 @@
                 android:layout_gravity="start"
                 android:layout_marginTop="4dp"
                 android:textSize="16dp"
-                android:text="@string/menu1_411" />
+                android:text="@string/menu1_311" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
                 android:layout_gravity="start"
                 android:layout_marginTop="4dp"
                 android:textSize="16dp"
-                android:text="@string/menu1_412" />
+                android:text="@string/menu1_312" />
 
 
             <TextView
@@ -74,7 +74,7 @@
                 android:justificationMode="inter_word"
                 android:layout_marginTop="4dp"
                 android:textSize="16dp"
-                android:text="@string/menu1_421" />
+                android:text="@string/menu1_321" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -83,7 +83,7 @@
                 android:justificationMode="inter_word"
                 android:layout_marginTop="4dp"
                 android:textSize="16dp"
-                android:text="@string/menu1_422" />
+                android:text="@string/menu1_322" />
 
 
             <TextView
@@ -106,7 +106,7 @@
                 android:justificationMode="inter_word"
                 android:layout_marginTop="4dp"
                 android:textSize="16dp"
-                android:text="@string/menu1_431" />
+                android:text="@string/menu1_331" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -115,7 +115,7 @@
                 android:justificationMode="inter_word"
                 android:layout_marginTop="4dp"
                 android:textSize="16dp"
-                android:text="@string/menu1_432" />
+                android:text="@string/menu1_332" />
 
             <TextView
                 android:layout_width="200dp"
@@ -137,7 +137,7 @@
                 android:justificationMode="inter_word"
                 android:layout_marginTop="4dp"
                 android:textSize="16dp"
-                android:text="@string/menu1_441" />
+                android:text="@string/menu1_341" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -146,7 +146,7 @@
                 android:justificationMode="inter_word"
                 android:layout_marginTop="4dp"
                 android:textSize="16dp"
-                android:text="@string/menu1_442" />
+                android:text="@string/menu1_342" />
 
             <TextView
                 android:layout_width="200dp"
@@ -167,7 +167,7 @@
                 android:layout_gravity="start"
                 android:layout_marginTop="4dp"
                 android:textSize="16dp"
-                android:text="@string/menu1_451" />
+                android:text="@string/menu1_351" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -175,7 +175,7 @@
                 android:layout_gravity="start"
                 android:layout_marginTop="4dp"
                 android:textSize="16dp"
-                android:text="@string/menu1_452" />
+                android:text="@string/menu1_352" />
 
             <TextView
                 android:layout_width="200dp"
@@ -196,7 +196,7 @@
                 android:layout_gravity="start"
                 android:layout_marginTop="4dp"
                 android:textSize="16dp"
-                android:text="@string/menu1_461" />
+                android:text="@string/menu1_361" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -205,7 +205,7 @@
                 android:justificationMode="inter_word"
                 android:layout_marginTop="4dp"
                 android:textSize="16dp"
-                android:text="@string/menu1_462" />
+                android:text="@string/menu1_362" />
 
         </LinearLayout>
     </ScrollView>

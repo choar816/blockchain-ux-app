@@ -16,8 +16,9 @@
     <color name="gray_1">#FFE0E0E0</color> <!-- 224, 224, 224 -->
     <color name="gray_2">#FF5E5E5E</color> <!-- 94, 94, 94 -->
     <color name="gray_3">#FF929292</color> <!-- 146, 146, 146 -->
+    <color name="red_1">#FFCF5F13</color> <!-- 207, 95, 19 -->
 
 
-    <color name="textOriginal">#FF6E6E6E</color>
+    <color name="textOriginal">#FF000000</color>
     <color name="textOmitted">#FFD5D5D5</color> <!-- 213,213,213 -->
 </resources>

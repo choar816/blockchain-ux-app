@@ -2,18 +2,19 @@
     <string name="app_name">BLUE_v.7</string>
 
     <string name="menu1_1">본 체크리스트는 경험공학 연구실(EDEN)에서 개발한 블록체인 서비스 UX 가이드라인 중 주요항목을 선별하여 블록체인 서비스의 개발자 또는 운영자가 손쉽게 블록체인 서비스의 UX를 점검해 볼 수 있도록 만든 체크리스트입니다.\n\n체크리스트의 사용 편리성을 위해 일반적인 서비스에는 적용할 수 없는, 블록체인에 특화된 고려사항만을 포함하고 있으므로, UX를 고려한 서비스 설계에 익숙하지 않은 이용자는 일반적인 UX 가이드라인을 함께 고려함으로써 효과를 극대화할 수 있습니다.</string>
-    <string name="menu1_411">"<b>"기능 설명: "</b>"암호 화폐 관리를 위한 전자 지갑</string>
-    <string name="menu1_412">"<b>"작업 예시: "</b>"타 사용자에게 암호 화폐 송금</string>
-    <string name="menu1_421">"<b>"기능 설명: "</b>"다양한 형태의 자산을 중개자 없이 구매 및 판매</string>
-    <string name="menu1_422">"<b>"작업 예시: "</b>"블록체인을 활용한 중개자 없는 P2P 거래</string>
-    <string name="menu1_431">"<b>"기능 설명: "</b>"서비스 유지, 발전 기여에 대한 보상</string>
-    <string name="menu1_432">"<b>"작업 예시: "</b>"블록체인을 활용한 중개자 없는 P2P 거래</string>
-    <string name="menu1_441">"<b>"기능 설명: "</b>"정보, 콘텐츠 선별에 영향을 미치는 활동</string>
-    <string name="menu1_442">"<b>"작업 예시: "</b>"타 사용자가 게시한 글에 좋은 컨텐츠임을 표시</string>
-    <string name="menu1_451">"<b>"기능 설명: "</b>"정보, 시스템 등의 보안</string>
-    <string name="menu1_452">"<b>"작업 예시: "</b>"시드 구문을 활용한 계정 복구</string>
-    <string name="menu1_461">"<b>"기능 설명: "</b>"저작권의 신원 등을 증명</string>
-    <string name="menu1_462">"<b>"작업 예시: "</b>"창작물을 암호화폐와 연동하여 저작권 증명</string>
+    <string name="menu1_311">"<b>"기능 설명: "</b>"암호 화폐 관리를 위한 전자 지갑</string>
+    <string name="menu1_312">"<b>"작업 예시: "</b>"타 사용자에게 암호 화폐 송금</string>
+    <string name="menu1_321">"<b>"기능 설명: "</b>"다양한 형태의 자산을 중개자 없이 구매 및 판매</string>
+    <string name="menu1_322">"<b>"작업 예시: "</b>"블록체인을 활용한 중개자 없는 P2P 거래</string>
+    <string name="menu1_331">"<b>"기능 설명: "</b>"서비스 유지, 발전 기여에 대한 보상</string>
+    <string name="menu1_332">"<b>"작업 예시: "</b>"블록체인을 활용한 중개자 없는 P2P 거래</string>
+    <string name="menu1_341">"<b>"기능 설명: "</b>"정보, 콘텐츠 선별에 영향을 미치는 활동</string>
+    <string name="menu1_342">"<b>"작업 예시: "</b>"타 사용자가 게시한 글에 좋은 컨텐츠임을 표시</string>
+    <string name="menu1_351">"<b>"기능 설명: "</b>"정보, 시스템 등의 보안</string>
+    <string name="menu1_352">"<b>"작업 예시: "</b>"시드 구문을 활용한 계정 복구</string>
+    <string name="menu1_361">"<b>"기능 설명: "</b>"저작권의 신원 등을 증명</string>
+    <string name="menu1_362">"<b>"작업 예시: "</b>"창작물을 암호화폐와 연동하여 저작권 증명</string>
+    <string name="menu1_41">UX란 서비스에 대한 사용자의 총체적 경험을 말합니다.\n본 체크리스트를 통해 다음과 같은 UX를 향상시킬 수 있습니다.</string>
 
     <string name="menu3_1">POSTECH EDEN Lab.</string>
     <string name="menu3_2">포항공과 대학교 EDEN 연구실은 “Experience Design for All”을 비전으로 삼으며 UI와 UX에 대해 연구하고 있습니다. 본 어플리케이션은 한국연구재단의 지원을 받아 수행된 연구 결과입니다. (2019R1A2C1086366)</string>

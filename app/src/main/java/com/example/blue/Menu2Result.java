@@ -603,7 +603,7 @@ public class Menu2Result extends AppCompatActivity {
         CharSequence format = android.text.format.DateFormat.format("yyyy-MM-dd_hh:mm:ss", date);
         try {
             // Initialising the directory of storage
-            String dirpath = Environment.getExternalStorageDirectory() + "/BUX";
+            String dirpath = Environment.getExternalStorageDirectory().toString();
             File file = new File(dirpath);
             if (!file.exists()) {
                 boolean mkdir = file.mkdir();
