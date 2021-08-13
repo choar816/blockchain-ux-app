@@ -18,25 +18,20 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentStatePagerAdapter;
-import androidx.viewpager.widget.ViewPager;
-
-import com.google.android.material.tabs.TabLayout;
-
-import org.w3c.dom.Text;
+import com.example.blue.MediaScanner;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
@@ -47,9 +42,10 @@ import butterknife.internal.Utils;
 public class Menu2Result extends AppCompatActivity {
     Button save;
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
-    private static String[] permissionstorage = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE};
+    private static String[] permissionstorage = {Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            Manifest.permission.READ_EXTERNAL_STORAGE};
 
-    @BindView(R.id.scrollView) protected ScrollView scroll;
+    @BindView(R.id.result_scrollview) protected ScrollView scroll;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,80 +56,88 @@ public class Menu2Result extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("체크리스트 결과");
 
-        TextView a101 = (TextView) findViewById(R.id.answer_101);
-        TextView a102 = (TextView) findViewById(R.id.answer_102);
-        TextView a103 = (TextView) findViewById(R.id.answer_103);
-        TextView a104 = (TextView) findViewById(R.id.answer_104);
-        TextView a105 = (TextView) findViewById(R.id.answer_105);
-        TextView a106 = (TextView) findViewById(R.id.answer_106);
-        TextView a107 = (TextView) findViewById(R.id.answer_107);
-        TextView a108 = (TextView) findViewById(R.id.answer_108);
-        TextView a109 = (TextView) findViewById(R.id.answer_109);
-        TextView a110 = (TextView) findViewById(R.id.answer_110);
-        TextView a111 = (TextView) findViewById(R.id.answer_111);
+        TextView texts1[] = new TextView[11];
+        TextView texts2[] = new TextView[12];
+        TextView texts3[] = new TextView[12];
+        TextView texts4[] = new TextView[8];
+        TextView texts5[] = new TextView[8];
+        TextView texts6[] = new TextView[11];
 
-        TextView a201 = (TextView) findViewById(R.id.answer_201);
-        TextView a202 = (TextView) findViewById(R.id.answer_202);
-        TextView a203 = (TextView) findViewById(R.id.answer_203);
-        TextView a204 = (TextView) findViewById(R.id.answer_204);
-        TextView a205 = (TextView) findViewById(R.id.answer_205);
-        TextView a206 = (TextView) findViewById(R.id.answer_206);
-        TextView a207 = (TextView) findViewById(R.id.answer_207);
-        TextView a208 = (TextView) findViewById(R.id.answer_208);
-        TextView a209 = (TextView) findViewById(R.id.answer_209);
-        TextView a210 = (TextView) findViewById(R.id.answer_210);
-        TextView a211 = (TextView) findViewById(R.id.answer_211);
-        TextView a212 = (TextView) findViewById(R.id.answer_212);
+        texts1[0] = (TextView) findViewById(R.id.answer_101);
+        texts1[1] = (TextView) findViewById(R.id.answer_102);
+        texts1[2] = (TextView) findViewById(R.id.answer_103);
+        texts1[3] = (TextView) findViewById(R.id.answer_104);
+        texts1[4] = (TextView) findViewById(R.id.answer_105);
+        texts1[5] = (TextView) findViewById(R.id.answer_106);
+        texts1[6] = (TextView) findViewById(R.id.answer_107);
+        texts1[7] = (TextView) findViewById(R.id.answer_108);
+        texts1[8] = (TextView) findViewById(R.id.answer_109);
+        texts1[9] = (TextView) findViewById(R.id.answer_110);
+        texts1[10] = (TextView) findViewById(R.id.answer_111);
 
-        TextView a301 = (TextView) findViewById(R.id.answer_301);
-        TextView a302 = (TextView) findViewById(R.id.answer_302);
-        TextView a303 = (TextView) findViewById(R.id.answer_303);
-        TextView a304 = (TextView) findViewById(R.id.answer_304);
-        TextView a305 = (TextView) findViewById(R.id.answer_305);
-        TextView a306 = (TextView) findViewById(R.id.answer_306);
-        TextView a307 = (TextView) findViewById(R.id.answer_307);
-        TextView a308 = (TextView) findViewById(R.id.answer_308);
-        TextView a309 = (TextView) findViewById(R.id.answer_309);
-        TextView a310 = (TextView) findViewById(R.id.answer_310);
-        TextView a311 = (TextView) findViewById(R.id.answer_311);
-        TextView a312 = (TextView) findViewById(R.id.answer_312);
+        texts2[0] = (TextView) findViewById(R.id.answer_201);
+        texts2[1] = (TextView) findViewById(R.id.answer_202);
+        texts2[2] = (TextView) findViewById(R.id.answer_203);
+        texts2[3] = (TextView) findViewById(R.id.answer_204);
+        texts2[4] = (TextView) findViewById(R.id.answer_205);
+        texts2[5] = (TextView) findViewById(R.id.answer_206);
+        texts2[6] = (TextView) findViewById(R.id.answer_207);
+        texts2[7] = (TextView) findViewById(R.id.answer_208);
+        texts2[8] = (TextView) findViewById(R.id.answer_209);
+        texts2[9] = (TextView) findViewById(R.id.answer_210);
+        texts2[10] = (TextView) findViewById(R.id.answer_211);
+        texts2[11] = (TextView) findViewById(R.id.answer_212);
 
-        TextView a401 = (TextView) findViewById(R.id.answer_401);
-        TextView a402 = (TextView) findViewById(R.id.answer_402);
-        TextView a403 = (TextView) findViewById(R.id.answer_403);
-        TextView a404 = (TextView) findViewById(R.id.answer_404);
-        TextView a405 = (TextView) findViewById(R.id.answer_405);
-        TextView a406 = (TextView) findViewById(R.id.answer_406);
-        TextView a407 = (TextView) findViewById(R.id.answer_407);
-        TextView a408 = (TextView) findViewById(R.id.answer_408);
+        texts3[0] = (TextView) findViewById(R.id.answer_301);
+        texts3[1] = (TextView) findViewById(R.id.answer_302);
+        texts3[2] = (TextView) findViewById(R.id.answer_303);
+        texts3[3] = (TextView) findViewById(R.id.answer_304);
+        texts3[4] = (TextView) findViewById(R.id.answer_305);
+        texts3[5] = (TextView) findViewById(R.id.answer_306);
+        texts3[6] = (TextView) findViewById(R.id.answer_307);
+        texts3[7] = (TextView) findViewById(R.id.answer_308);
+        texts3[8] = (TextView) findViewById(R.id.answer_309);
+        texts3[9] = (TextView) findViewById(R.id.answer_310);
+        texts3[10] = (TextView) findViewById(R.id.answer_311);
+        texts3[11] = (TextView) findViewById(R.id.answer_312);
 
-        TextView a501 = (TextView) findViewById(R.id.answer_501);
-        TextView a502 = (TextView) findViewById(R.id.answer_502);
-        TextView a503 = (TextView) findViewById(R.id.answer_503);
-        TextView a504 = (TextView) findViewById(R.id.answer_504);
-        TextView a505 = (TextView) findViewById(R.id.answer_505);
-        TextView a506 = (TextView) findViewById(R.id.answer_506);
-        TextView a507 = (TextView) findViewById(R.id.answer_507);
-        TextView a508 = (TextView) findViewById(R.id.answer_508);
+        texts4[0] = (TextView) findViewById(R.id.answer_401);
+        texts4[1] = (TextView) findViewById(R.id.answer_402);
+        texts4[2] = (TextView) findViewById(R.id.answer_403);
+        texts4[3] = (TextView) findViewById(R.id.answer_404);
+        texts4[4] = (TextView) findViewById(R.id.answer_405);
+        texts4[5] = (TextView) findViewById(R.id.answer_406);
+        texts4[6] = (TextView) findViewById(R.id.answer_407);
+        texts4[7] = (TextView) findViewById(R.id.answer_408);
 
-        TextView a601 = (TextView) findViewById(R.id.answer_601);
-        TextView a602 = (TextView) findViewById(R.id.answer_602);
-        TextView a603 = (TextView) findViewById(R.id.answer_603);
-        TextView a604 = (TextView) findViewById(R.id.answer_604);
-        TextView a605 = (TextView) findViewById(R.id.answer_605);
-        TextView a606 = (TextView) findViewById(R.id.answer_606);
-        TextView a607 = (TextView) findViewById(R.id.answer_607);
-        TextView a608 = (TextView) findViewById(R.id.answer_608);
-        TextView a609 = (TextView) findViewById(R.id.answer_609);
-        TextView a610 = (TextView) findViewById(R.id.answer_610);
-        TextView a611 = (TextView) findViewById(R.id.answer_611);
+        texts5[0] = (TextView) findViewById(R.id.answer_501);
+        texts5[1] = (TextView) findViewById(R.id.answer_502);
+        texts5[2] = (TextView) findViewById(R.id.answer_503);
+        texts5[3] = (TextView) findViewById(R.id.answer_504);
+        texts5[4] = (TextView) findViewById(R.id.answer_505);
+        texts5[5] = (TextView) findViewById(R.id.answer_506);
+        texts5[6] = (TextView) findViewById(R.id.answer_507);
+        texts5[7] = (TextView) findViewById(R.id.answer_508);
 
-        TextView a1 = (TextView) findViewById(R.id.answer_1);
-        TextView a2 = (TextView) findViewById(R.id.answer_2);
-        TextView a3 = (TextView) findViewById(R.id.answer_3);
-        TextView a4 = (TextView) findViewById(R.id.answer_4);
-        TextView a5 = (TextView) findViewById(R.id.answer_5);
-        TextView a6 = (TextView) findViewById(R.id.answer_6);
+        texts6[0] = (TextView) findViewById(R.id.answer_601);
+        texts6[1] = (TextView) findViewById(R.id.answer_602);
+        texts6[2] = (TextView) findViewById(R.id.answer_603);
+        texts6[3] = (TextView) findViewById(R.id.answer_604);
+        texts6[4] = (TextView) findViewById(R.id.answer_605);
+        texts6[5] = (TextView) findViewById(R.id.answer_606);
+        texts6[6] = (TextView) findViewById(R.id.answer_607);
+        texts6[7] = (TextView) findViewById(R.id.answer_608);
+        texts6[8] = (TextView) findViewById(R.id.answer_609);
+        texts6[9] = (TextView) findViewById(R.id.answer_610);
+        texts6[10] = (TextView) findViewById(R.id.answer_611);
+
+        TextView titles[] = new TextView[6];
+        titles[0] = (TextView) findViewById(R.id.answer_1);
+        titles[1] = (TextView) findViewById(R.id.answer_2);
+        titles[2] = (TextView) findViewById(R.id.answer_3);
+        titles[3] = (TextView) findViewById(R.id.answer_4);
+        titles[4] = (TextView) findViewById(R.id.answer_5);
+        titles[5] = (TextView) findViewById(R.id.answer_6);
 
 
         Intent intent = getIntent();
@@ -146,436 +150,94 @@ public class Menu2Result extends AppCompatActivity {
         boolean[] bool6 = bundle.getBooleanArray("answer6");
 
         // true가 한개라도 있으면 소제목 visible, 아니면 gone
-        int numTrue1 = 0;
-        int numTrue2 = 0;
-        int numTrue3 = 0;
-        int numTrue4 = 0;
-        int numTrue5 = 0;
-        int numTrue6 = 0;
-
-        int numGuide = 0;
+        int numTrue[] = new int[6];
+        for (int i=0; i<numTrue.length; ++i) {
+            numTrue[i] = 0;
+        }
 
         // Chap 1 가이드
-
-        if (bool1[0] == true) {
-            a101.setVisibility(View.VISIBLE);
-            ++numTrue1;
-        } else {
-            a101.setVisibility(View.GONE);
-        }
-        if (bool1[1] == true) {
-            a102.setVisibility(View.VISIBLE);
-            ++numTrue1;
-        } else {
-            a102.setVisibility(View.GONE);
-        }
-        if (bool1[2] == true) {
-            a103.setVisibility(View.VISIBLE);
-            ++numTrue1;
-        } else {
-            a103.setVisibility(View.GONE);
-        }
-        if (bool1[3] == true) {
-            a104.setVisibility(View.VISIBLE);
-            ++numTrue1;
-        } else {
-            a104.setVisibility(View.GONE);
-        }
-        if (bool1[4] == true) {
-            a105.setVisibility(View.VISIBLE);
-            ++numTrue1;
-        } else {
-            a105.setVisibility(View.GONE);
-        }
-        if (bool1[5] == true) {
-            a106.setVisibility(View.VISIBLE);
-            ++numTrue1;
-        } else {
-            a106.setVisibility(View.GONE);
-        }
-        if (bool1[6] == true) {
-            a107.setVisibility(View.VISIBLE);
-            ++numTrue1;
-        } else {
-            a107.setVisibility(View.GONE);
-        }
-        if (bool1[7] == true) {
-            a108.setVisibility(View.VISIBLE);
-            ++numTrue1;
-        } else {
-            a108.setVisibility(View.GONE);
-        }
-        if (bool1[8] == true) {
-            a109.setVisibility(View.VISIBLE);
-            ++numTrue1;
-        } else {
-            a109.setVisibility(View.GONE);
-        }
-        if (bool1[9] == true) {
-            a110.setVisibility(View.VISIBLE);
-            ++numTrue1;
-        } else {
-            a110.setVisibility(View.GONE);
-        }
-        if (bool1[10] == true) {
-            a111.setVisibility(View.VISIBLE);
-            ++numTrue1;
-        } else {
-            a111.setVisibility(View.GONE);
+        for (int i=0; i<bool1.length; ++i) {
+            if (bool1[i] == true) {
+                texts1[i].setVisibility(View.VISIBLE);
+                ++numTrue[0];
+            } else {
+                texts1[i].setVisibility(View.GONE);
+            }
         }
 
         // Chap 2 가이드
-
-        if (bool2[0] == true) {
-            a201.setVisibility(View.VISIBLE);
-            ++numTrue2;
-        } else {
-            a201.setVisibility(View.GONE);
-        }
-        if (bool2[1] == true) {
-            a202.setVisibility(View.VISIBLE);
-            ++numTrue2;
-        } else {
-            a202.setVisibility(View.GONE);
-        }
-        if (bool2[2] == true) {
-            a203.setVisibility(View.VISIBLE);
-            ++numTrue2;
-        } else {
-            a203.setVisibility(View.GONE);
-        }
-        if (bool2[3] == true) {
-            a204.setVisibility(View.VISIBLE);
-            ++numTrue2;
-        } else {
-            a204.setVisibility(View.GONE);
-        }
-        if (bool2[4] == true) {
-            a205.setVisibility(View.VISIBLE);
-            ++numTrue2;
-        } else {
-            a205.setVisibility(View.GONE);
-        }
-        if (bool2[5] == true) {
-            a206.setVisibility(View.VISIBLE);
-            ++numTrue2;
-        } else {
-            a206.setVisibility(View.GONE);
-        }
-        if (bool2[6] == true) {
-            a207.setVisibility(View.VISIBLE);
-            ++numTrue2;
-        } else {
-            a207.setVisibility(View.GONE);
-        }
-        if (bool2[7] == true) {
-            a208.setVisibility(View.VISIBLE);
-            ++numTrue2;
-        } else {
-            a208.setVisibility(View.GONE);
-        }
-        if (bool2[8] == true) {
-            a209.setVisibility(View.VISIBLE);
-            ++numTrue2;
-        } else {
-            a209.setVisibility(View.GONE);
-        }
-
-        if (bool2[9] == true) {
-            a210.setVisibility(View.VISIBLE);
-            ++numTrue2;
-        } else {
-            a210.setVisibility(View.GONE);
-        }
-        if (bool2[10] == true) {
-            a211.setVisibility(View.VISIBLE);
-            ++numTrue2;
-        } else {
-            a211.setVisibility(View.GONE);
-        }
-        if (bool2[11] == true) {
-            a212.setVisibility(View.VISIBLE);
-            ++numTrue2;
-        } else {
-            a212.setVisibility(View.GONE);
+        for (int i=0; i<bool2.length; ++i) {
+            if (bool2[i] == true) {
+                texts2[i].setVisibility(View.VISIBLE);
+                ++numTrue[1];
+            } else {
+                texts2[i].setVisibility(View.GONE);
+            }
         }
 
         // Chap 3 가이드
-
-        if (bool3[0] == true) {
-            a301.setVisibility(View.VISIBLE);
-            ++numTrue3;
-        } else {
-            a301.setVisibility(View.GONE);
-        }
-        if (bool3[1] == true) {
-            a302.setVisibility(View.VISIBLE);
-            ++numTrue3;
-        } else {
-            a302.setVisibility(View.GONE);
-        }
-        if (bool3[2] == true) {
-            a303.setVisibility(View.VISIBLE);
-            ++numTrue3;
-        } else {
-            a303.setVisibility(View.GONE);
-        }
-        if (bool3[3] == true) {
-            a304.setVisibility(View.VISIBLE);
-            ++numTrue3;
-        } else {
-            a304.setVisibility(View.GONE);
-        }
-        if (bool3[4] == true) {
-            a305.setVisibility(View.VISIBLE);
-            ++numTrue3;
-        } else {
-            a305.setVisibility(View.GONE);
-        }
-        if (bool3[5] == true) {
-            a306.setVisibility(View.VISIBLE);
-            ++numTrue3;
-        } else {
-            a306.setVisibility(View.GONE);
-        }
-        if (bool3[6] == true) {
-            a307.setVisibility(View.VISIBLE);
-            ++numTrue3;
-        } else {
-            a307.setVisibility(View.GONE);
-        }
-        if (bool3[7] == true) {
-            a308.setVisibility(View.VISIBLE);
-            ++numTrue3;
-        } else {
-            a308.setVisibility(View.GONE);
-        }
-        if (bool3[8] == true) {
-            a309.setVisibility(View.VISIBLE);
-            ++numTrue3;
-        } else {
-            a309.setVisibility(View.GONE);
-        }
-        if (bool3[9] == true) {
-            a310.setVisibility(View.VISIBLE);
-            ++numTrue3;
-        } else {
-            a310.setVisibility(View.GONE);
-        }
-        if (bool3[10] == true) {
-            a311.setVisibility(View.VISIBLE);
-            ++numTrue3;
-        } else {
-            a311.setVisibility(View.GONE);
-        }
-        if (bool3[11] == true) {
-            a312.setVisibility(View.VISIBLE);
-            ++numTrue3;
-        } else {
-            a312.setVisibility(View.GONE);
+        for (int i=0; i<bool3.length; ++i) {
+            if (bool3[i] == true) {
+                texts3[i].setVisibility(View.VISIBLE);
+                ++numTrue[2];
+            } else {
+                texts3[i].setVisibility(View.GONE);
+            }
         }
 
         // Chap 4 가이드
-
-        if (bool4[0] == true) {
-            a401.setVisibility(View.VISIBLE);
-            ++numTrue4;
-        } else {
-            a401.setVisibility(View.GONE);
+        for (int i=0; i<bool4.length; ++i) {
+            if (bool4[i] == true) {
+                texts4[i].setVisibility(View.VISIBLE);
+                ++numTrue[3];
+            } else {
+                texts4[i].setVisibility(View.GONE);
+            }
         }
-        if (bool4[1] == true) {
-            a402.setVisibility(View.VISIBLE);
-            ++numTrue4;
-        } else {
-            a402.setVisibility(View.GONE);
-        }
-        if (bool4[2] == true) {
-            a403.setVisibility(View.VISIBLE);
-            ++numTrue4;
-        } else {
-            a403.setVisibility(View.GONE);
-        }
-        if (bool4[3] == true) {
-            a404.setVisibility(View.VISIBLE);
-            ++numTrue4;
-        } else {
-            a404.setVisibility(View.GONE);
-        }
-        if (bool4[4] == true) {
-            a405.setVisibility(View.VISIBLE);
-            ++numTrue4;
-        } else {
-            a405.setVisibility(View.GONE);
-        }
-        if (bool4[5] == true) {
-            a406.setVisibility(View.VISIBLE);
-            ++numTrue4;
-        } else {
-            a406.setVisibility(View.GONE);
-        }
-        if (bool4[6] == true) {
-            a407.setVisibility(View.VISIBLE);
-            ++numTrue4;
-        } else {
-            a407.setVisibility(View.GONE);
-        }
-        if (bool4[7] == true) {
-            a408.setVisibility(View.VISIBLE);
-            ++numTrue4;
-        } else {
-            a408.setVisibility(View.GONE);
-        }
-
 
         // Chap 5 가이드
-
-        if (bool5[0] == true) {
-            a501.setVisibility(View.VISIBLE);
-            ++numTrue5;
-        } else {
-            a501.setVisibility(View.GONE);
+        for (int i=0; i<bool5.length; ++i) {
+            if (bool5[i] == true) {
+                texts5[i].setVisibility(View.VISIBLE);
+                ++numTrue[4];
+            } else {
+                texts5[i].setVisibility(View.GONE);
+            }
         }
-        if (bool5[1] == true) {
-            a502.setVisibility(View.VISIBLE);
-            ++numTrue5;
-        } else {
-            a502.setVisibility(View.GONE);
-        }
-        if (bool5[2] == true) {
-            a503.setVisibility(View.VISIBLE);
-            ++numTrue5;
-        } else {
-            a503.setVisibility(View.GONE);
-        }
-        if (bool5[3] == true) {
-            a504.setVisibility(View.VISIBLE);
-            ++numTrue5;
-        } else {
-            a504.setVisibility(View.GONE);
-        }
-        if (bool5[4] == true) {
-            a505.setVisibility(View.VISIBLE);
-            ++numTrue5;
-        } else {
-            a505.setVisibility(View.GONE);
-        }
-        if (bool5[5] == true) {
-            a506.setVisibility(View.VISIBLE);
-            ++numTrue5;
-        } else {
-            a506.setVisibility(View.GONE);
-        }
-        if (bool5[6] == true) {
-            a507.setVisibility(View.VISIBLE);
-            ++numTrue5;
-        } else {
-            a507.setVisibility(View.GONE);
-        }
-        if (bool5[7] == true) {
-            a508.setVisibility(View.VISIBLE);
-            ++numTrue5;
-        } else {
-            a508.setVisibility(View.GONE);
-        }
-
 
         // Chap 6 가이드
-
-        if (bool6[0] == true) {
-            a601.setVisibility(View.VISIBLE);
-            ++numTrue6;
-        } else {
-            a601.setVisibility(View.GONE);
-        }
-        if (bool6[1] == true) {
-            a602.setVisibility(View.VISIBLE);
-            ++numTrue6;
-        } else {
-            a602.setVisibility(View.GONE);
-        }
-        if (bool6[2] == true) {
-            a603.setVisibility(View.VISIBLE);
-            ++numTrue6;
-        } else {
-            a603.setVisibility(View.GONE);
-        }
-        if (bool6[3] == true) {
-            a604.setVisibility(View.VISIBLE);
-            ++numTrue6;
-        } else {
-            a604.setVisibility(View.GONE);
-        }
-        if (bool6[4] == true) {
-            a605.setVisibility(View.VISIBLE);
-            ++numTrue6;
-        } else {
-            a605.setVisibility(View.GONE);
-        }
-        if (bool6[5] == true) {
-            a606.setVisibility(View.VISIBLE);
-            ++numTrue6;
-        } else {
-            a606.setVisibility(View.GONE);
-        }
-        if (bool6[6] == true) {
-            a607.setVisibility(View.VISIBLE);
-            ++numTrue6;
-        } else {
-            a607.setVisibility(View.GONE);
-        }
-        if (bool6[7] == true) {
-            a608.setVisibility(View.VISIBLE);
-            ++numTrue6;
-        } else {
-            a608.setVisibility(View.GONE);
-        }
-        if (bool6[8] == true) {
-            a609.setVisibility(View.VISIBLE);
-            ++numTrue6;
-        } else {
-            a609.setVisibility(View.GONE);
+        for (int i=0; i<bool6.length; ++i) {
+            if (bool6[i] == true) {
+                texts6[i].setVisibility(View.VISIBLE);
+                ++numTrue[5];
+            } else {
+                texts6[i].setVisibility(View.GONE);
+            }
         }
 
-        if (bool6[9] == true) {
-            a610.setVisibility(View.VISIBLE);
-            ++numTrue6;
-        } else {
-            a610.setVisibility(View.GONE);
-        }
-        if (bool6[10] == true) {
-            a611.setVisibility(View.VISIBLE);
-            ++numTrue6;
-        } else {
-            a611.setVisibility(View.GONE);
+        // true가 한개라도 있으면 소제목 visible, 아니면 gone
+        for (int i=0; i<numTrue.length; ++i) {
+            if (numTrue[i] != 0) {
+                titles[i].setVisibility(View.VISIBLE);
+            } else {
+                titles[i].setVisibility(View.GONE);
+            }
         }
 
-        if (numTrue1 != 0) { a1.setVisibility(View.VISIBLE);
-        } else { a1.setVisibility(View.GONE); }
-        if (numTrue2 != 0) { a2.setVisibility(View.VISIBLE);
-        } else { a2.setVisibility(View.GONE); }
-        if (numTrue3 != 0) { a3.setVisibility(View.VISIBLE);
-        } else { a3.setVisibility(View.GONE); }
-        if (numTrue4 != 0) { a4.setVisibility(View.VISIBLE);
-        } else { a4.setVisibility(View.GONE); }
-        if (numTrue5 != 0) { a5.setVisibility(View.VISIBLE);
-        } else { a5.setVisibility(View.GONE); }
-        if (numTrue6 != 0) { a6.setVisibility(View.VISIBLE);
-        } else { a6.setVisibility(View.GONE); }
+        SimpleDateFormat sdf = new SimpleDateFormat( "yyyyMMddHHmmss"); //년,월,일,시간 포멧 설정
+        Date time = new Date(); //파일명 중복 방지를 위해 사용될 현재시간
+        String current_time = sdf.format(time); //String형 변수에 저장
 
-        numGuide = numTrue1 + numTrue2 + numTrue3 + numTrue4 + numTrue5 + numTrue6;
-
-
-        // 사진 저장 권한 확인
-        verifystoragepermissions(this);
+        LinearLayout layout = (LinearLayout) findViewById(R.id.result_layout);
+        ScrollView scrollView = (ScrollView) findViewById(R.id.result_scrollview);
 
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setMessage("사진 앨범에 저장하시겠습니까?");
         alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                screenshot(getWindow().getDecorView().getRootView(), "result");
-
-                Toast.makeText(getApplicationContext(), "사진 앨범에 저장되었습니다.", Toast.LENGTH_SHORT).show();
+                //Screenshot1();
+                Screenshot2(layout, current_time);
             }
         });
         alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -588,54 +250,99 @@ public class Menu2Result extends AppCompatActivity {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                verifyStoragePermissions(Menu2Result.this);
                 alert.show();
             }
         });
 
     }
 
+    // Works for Mi Pad
+    private void Screenshot1() {
+        Date now = new Date();
+        android.text.format.DateFormat.format("yyyymmdd_hhmmss", now);
 
-
-    protected static File screenshot(View view, String filename) {
-        Date date = new Date();
-
-        // Here we are initialising the format of our image name
-        CharSequence format = android.text.format.DateFormat.format("yyyy-MM-dd_hh:mm:ss", date);
         try {
-            // Initialising the directory of storage
-            String dirpath = Environment.getExternalStorageDirectory().toString();
-            File file = new File(dirpath);
-            if (!file.exists()) {
-                boolean mkdir = file.mkdir();
-            }
+            // image naming and path  to include sd card  appending name you choose for file
+            String mPath = Environment.getExternalStorageDirectory().toString() + "/" + now + ".jpg";
 
-            // File name
-            String path = dirpath + "/" + filename + "-" + format + ".jpeg";
-            view.setDrawingCacheEnabled(true);
-            Bitmap bitmap = Bitmap.createBitmap(view.getDrawingCache());
-            view.setDrawingCacheEnabled(false);
-            File imageurl = new File(path);
-            FileOutputStream outputStream = new FileOutputStream(imageurl);
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 50, outputStream);
+            // create bitmap screen capture
+            View v1 = getWindow().getDecorView().getRootView();
+            v1.setDrawingCacheEnabled(true);
+            Bitmap bitmap = Bitmap.createBitmap(v1.getDrawingCache());
+            v1.setDrawingCacheEnabled(false);
+
+            File imageFile = new File(mPath);
+
+            FileOutputStream outputStream = new FileOutputStream(imageFile);
+            int quality = 100;
+            bitmap.compress(Bitmap.CompressFormat.JPEG, quality, outputStream);
             outputStream.flush();
             outputStream.close();
-            return imageurl;
 
-        } catch (FileNotFoundException io) {
-            io.printStackTrace();
-        } catch (IOException e) {
+            Toast.makeText(getApplicationContext(), "사진 앨범에 저장되었습니다.", Toast.LENGTH_SHORT).show();
+
+        } catch (Throwable e) {
+            // Several error may come out with file handling or DOM
             e.printStackTrace();
+
+            Toast.makeText(getApplicationContext(), "사진 저장에 실패했습니다.", Toast.LENGTH_SHORT).show();
         }
-        return null;
     }
 
-    // verifying if storage permission is given or not
-    public static void verifystoragepermissions(Activity activity) {
+    private void Screenshot2(View view, String title){
+        if (view == null) { //Null Point Exception ERROR 방지
+            System.out.println("::::ERROR:::: view == NULL");
+            return;
+        }
 
-        int permissions = ActivityCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        /* 캡쳐 파일 저장 */
+        view.buildDrawingCache(); //캐시 비트 맵 만들기
+        Bitmap bitmap = view.getDrawingCache();
+        FileOutputStream fos;
+
+        /* 저장할 폴더 Setting */
+        File uploadFolder = Environment.getExternalStoragePublicDirectory("/DCIM/Camera/"); //저장 경로 (File Type형 변수)
+
+        if (!uploadFolder.exists()) { //만약 경로에 폴더가 없다면
+            uploadFolder.mkdir(); //폴더 생성
+        }
+
+        /* 파일 저장 */
+        String Str_Path = Environment.getExternalStorageDirectory().getAbsolutePath()+"/DCIM/Camera/"; //저장 경로 (String Type 변수)
+
+        try {
+            fos = new FileOutputStream(Str_Path+title+".jpg"); // 경로 + 제목 + .jpg로 FileOutputStream Setting
+            bitmap.compress(Bitmap.CompressFormat.JPEG,80,fos);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        MediaScanner ms = MediaScanner.newInstance(getApplicationContext());
+
+        try { // TODO : 미디어 스캔
+            ms.mediaScanning(Str_Path + title + ".jpg");
+            Toast.makeText(getApplicationContext(), "사진 앨범에 저장되었습니다.", Toast.LENGTH_SHORT).show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("::::ERROR:::: " + e);
+            Toast.makeText(getApplicationContext(), "사진 저장에 실패했습니다.", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
+    // verifying if storage permission is given or not
+    public static void verifyStoragePermissions(Activity activity) {
+
+        int permission1 = ActivityCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        int permission2 = ActivityCompat.checkSelfPermission(activity, Manifest.permission.READ_EXTERNAL_STORAGE);
 
         // If storage permission is not given then request for External Storage Permission
-        if (permissions != PackageManager.PERMISSION_GRANTED) {
+        if (permission1 != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(activity, permissionstorage, REQUEST_EXTERNAL_STORAGE);
+        }
+        if (permission2 != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(activity, permissionstorage, REQUEST_EXTERNAL_STORAGE);
         }
     }
@@ -649,5 +356,5 @@ public class Menu2Result extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-}
 
+}
