@@ -12,172 +12,234 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:gravity="center_horizontal"
             android:padding="24dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
                 android:gravity="center"
                 android:textStyle="bold"
                 android:textSize="24dp"
-                android:text="UX 소개" />
+                android:text="평가 가능한 기능 목록" />
+
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/menu1_41"/>
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="16dp"
+                android:text="암호 화폐 지갑"
+                android:textSize="20dp"
+                android:textColor="@color/navy_5"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:gravity="center_horizontal" />
 
-            <LinearLayout
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:layout_gravity="start"
+                android:layout_marginTop="4dp"
+                android:textSize="16dp"
+                android:text="@string/menu1_311" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:layout_gravity="start"
+                android:layout_marginTop="4dp"
+                android:textSize="16dp"
+                android:text="@string/menu1_312" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_4"
+                android:layout_marginVertical="16dp"/>
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="32dp">
-                <TextView
-                    android:layout_width="110dp"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/background_text"
-                    android:padding="6dp"
-                    android:layout_marginRight="16dp"
-                    android:text="사용성"
-                    android:textSize="18dp"
-                    android:textStyle="bold"
-                    android:textAlignment="center"
-                    android:gravity="center_horizontal" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAlignment="center"
-                    android:layout_gravity="center"
-                    android:textSize="16dp"
-                    android:text="서비스를 편리하게 사용할 수 있다" />
-            </LinearLayout>
+                android:layout_marginBottom="16dp"
+                android:text="거래"
+                android:textSize="20dp"
+                android:textColor="@color/navy_5"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:gravity="center_horizontal" />
 
-            <LinearLayout
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:layout_gravity="start"
+                android:layout_marginTop="4dp"
+                android:textSize="16dp"
+                android:text="@string/menu1_321" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:layout_gravity="start"
+                android:layout_marginTop="4dp"
+                android:textSize="16dp"
+                android:text="@string/menu1_322" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_4"
+                android:layout_marginVertical="16dp"/>
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="28dp">
-                <TextView
-                    android:layout_width="110dp"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/background_text"
-                    android:padding="6dp"
-                    android:layout_marginRight="16dp"
-                    android:text="감성"
-                    android:textSize="18dp"
-                    android:textStyle="bold"
-                    android:textAlignment="center"
-                    android:gravity="center_horizontal" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAlignment="textStart"
-                    android:layout_gravity="start"
-                    android:textSize="16dp"
-                    android:text="서비스를 통해 다양한 감정적 경험을 할 수 있다" />
-            </LinearLayout>
+                android:layout_marginBottom="16dp"
+                android:text="보상"
+                android:textSize="20dp"
+                android:textColor="@color/navy_5"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:gravity="center_horizontal" />
 
-            <LinearLayout
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:layout_gravity="start"
+                android:layout_marginTop="4dp"
+                android:textSize="16dp"
+                android:text="@string/menu1_331" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:layout_gravity="start"
+                android:layout_marginTop="4dp"
+                android:textSize="16dp"
+                android:text="@string/menu1_332" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_4"
+                android:layout_marginVertical="16dp"/>
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="28dp">
-                <TextView
-                    android:layout_width="110dp"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/background_text"
-                    android:padding="6dp"
-                    android:layout_marginRight="16dp"
-                    android:text="사회성"
-                    android:textSize="18dp"
-                    android:textStyle="bold"
-                    android:textAlignment="center"
-                    android:gravity="center_horizontal" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAlignment="textStart"
-                    android:layout_gravity="start"
-                    android:textSize="16dp"
-                    android:text="서비스를 통해 다양한 사회적 경험을 할 수 있다" />
-            </LinearLayout>
+                android:layout_marginBottom="16dp"
+                android:text="큐레이팅"
+                android:textSize="20dp"
+                android:textColor="@color/navy_5"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:gravity="center_horizontal" />
 
-            <LinearLayout
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:layout_gravity="start"
+                android:layout_marginTop="4dp"
+                android:textSize="16dp"
+                android:text="@string/menu1_341" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:layout_gravity="start"
+                android:layout_marginTop="4dp"
+                android:textSize="16dp"
+                android:text="@string/menu1_342" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_4"
+                android:layout_marginVertical="16dp"/>
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="28dp">
-                <TextView
-                    android:layout_width="110dp"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/background_text"
-                    android:padding="6dp"
-                    android:layout_marginRight="16dp"
-                    android:text="사회적 가치"
-                    android:textSize="18dp"
-                    android:textStyle="bold"
-                    android:textAlignment="center"
-                    android:gravity="center_horizontal" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAlignment="textStart"
-                    android:layout_gravity="start"
-                    android:textSize="16dp"
-                    android:text="서비스를 활용하여 다양한 사회적 경험을 향상시킨다" />
-            </LinearLayout>
+                android:layout_marginBottom="16dp"
+                android:text="보안"
+                android:textSize="20dp"
+                android:textColor="@color/navy_5"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:gravity="center_horizontal" />
 
-            <LinearLayout
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:layout_gravity="start"
+                android:layout_marginTop="4dp"
+                android:textSize="16dp"
+                android:text="@string/menu1_351" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:layout_gravity="start"
+                android:layout_marginTop="4dp"
+                android:textSize="16dp"
+                android:text="@string/menu1_352" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_4"
+                android:layout_marginVertical="16dp"/>
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="28dp">
-                <TextView
-                    android:layout_width="110dp"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/background_text"
-                    android:padding="6dp"
-                    android:layout_marginRight="16dp"
-                    android:text="경제적 가치"
-                    android:textSize="18dp"
-                    android:textStyle="bold"
-                    android:textAlignment="center"
-                    android:gravity="center_horizontal" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAlignment="textStart"
-                    android:layout_gravity="start"
-                    android:textSize="16dp"
-                    android:text="서비스를 통해 경제적 이익을 실현할 수 있다" />
-            </LinearLayout>
+                android:layout_marginBottom="16dp"
+                android:text="증명"
+                android:textSize="20dp"
+                android:textColor="@color/navy_5"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:gravity="center_horizontal" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="28dp">
-                <TextView
-                    android:layout_width="110dp"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/background_text"
-                    android:padding="6dp"
-                    android:layout_marginRight="16dp"
-                    android:text="신뢰"
-                    android:textSize="18dp"
-                    android:textStyle="bold"
-                    android:textAlignment="center"
-                    android:gravity="center_horizontal" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAlignment="textStart"
-                    android:layout_gravity="start"
-                    android:textSize="16dp"
-                    android:text="서비스와 관련된 경험의 신뢰를 향상시킨다" />
-            </LinearLayout>
+                android:textAlignment="textStart"
+                android:layout_gravity="start"
+                android:layout_marginTop="4dp"
+                android:textSize="16dp"
+                android:text="@string/menu1_361" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:layout_gravity="start"
+                android:layout_marginTop="4dp"
+                android:textSize="16dp"
+                android:text="@string/menu1_362" />
+
+        </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_uxstart"
+                android:text="UX 평가 시작하기"
+                android:layout_width="240dp"
+                android:layout_height="52dp"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:background="@drawable/background_button"
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center_horizontal"/>
 
         </LinearLayout>
     </ScrollView>

@@ -10,6 +10,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.DashPathEffect;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -25,7 +26,16 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
 import com.example.blue.MediaScanner;
+import com.github.mikephil.charting.charts.RadarChart;
+import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.components.YAxis;
+import com.github.mikephil.charting.data.RadarData;
+import com.github.mikephil.charting.data.RadarDataSet;
+import com.github.mikephil.charting.data.RadarEntry;
+import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -131,6 +141,19 @@ public class Menu2Result extends AppCompatActivity {
         texts6[9] = (TextView) findViewById(R.id.answer_610);
         texts6[10] = (TextView) findViewById(R.id.answer_611);
 
+        TextView[][] texts = new TextView[6][];
+        texts[0] = texts1;
+        texts[1] = texts2;
+        texts[2] = texts3;
+        texts[3] = texts4;
+        texts[4] = texts5;
+        texts[5] = texts6;
+
+        ArrayList<ArrayList<TextView>> texts_ = new ArrayList<ArrayList<TextView>>(6);
+        ArrayList<TextView> temp = new ArrayList<TextView>();
+//        texts_.add()
+
+
         TextView titles[] = new TextView[6];
         titles[0] = (TextView) findViewById(R.id.answer_1);
         titles[1] = (TextView) findViewById(R.id.answer_2);
@@ -142,80 +165,41 @@ public class Menu2Result extends AppCompatActivity {
 
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
-        boolean[] bool1 = bundle.getBooleanArray("answer1");
-        boolean[] bool2 = bundle.getBooleanArray("answer2");
-        boolean[] bool3 = bundle.getBooleanArray("answer3");
-        boolean[] bool4 = bundle.getBooleanArray("answer4");
-        boolean[] bool5 = bundle.getBooleanArray("answer5");
-        boolean[] bool6 = bundle.getBooleanArray("answer6");
+        int[] answer1s = bundle.getIntArray("answer1");
+        int[] answer2s = bundle.getIntArray("answer2");
+        int[] answer3s = bundle.getIntArray("answer3");
+        int[] answer4s = bundle.getIntArray("answer4");
+        int[] answer5s = bundle.getIntArray("answer5");
+        int[] answer6s = bundle.getIntArray("answer6");
 
-        // true가 한개라도 있으면 소제목 visible, 아니면 gone
+        int[][] answers = new int[6][];
+        answers[0] = answer1s;
+        answers[1] = answer2s;
+        answers[2] = answer3s;
+        answers[3] = answer4s;
+        answers[4] = answer5s;
+        answers[5] = answer6s;
+
+
+        // '전혀아니다, 아니다'가 한개라도 있으면 -> 소제목 visible, 아니면 gone
         int numTrue[] = new int[6];
         for (int i=0; i<numTrue.length; ++i) {
-            numTrue[i] = 0;
+            numTrue[i] = 0; // 0으로 초기화
         }
 
-        // Chap 1 가이드
-        for (int i=0; i<bool1.length; ++i) {
-            if (bool1[i] == true) {
-                texts1[i].setVisibility(View.VISIBLE);
-                ++numTrue[0];
-            } else {
-                texts1[i].setVisibility(View.GONE);
+        // '전혀아니다, 아니다' 선택 문장 -> 가이드에 띄움
+        for (int i=0; i<answers.length; ++i) {
+            for (int j=0; j<answers[i].length; ++j) {
+                if (answers[i][j] == 0 || answers[i][j] == 1) {
+                    texts[i][j].setVisibility(View.VISIBLE);
+                    ++numTrue[i];
+                } else {
+                    texts[i][j].setVisibility(View.GONE);
+                }
             }
         }
 
-        // Chap 2 가이드
-        for (int i=0; i<bool2.length; ++i) {
-            if (bool2[i] == true) {
-                texts2[i].setVisibility(View.VISIBLE);
-                ++numTrue[1];
-            } else {
-                texts2[i].setVisibility(View.GONE);
-            }
-        }
-
-        // Chap 3 가이드
-        for (int i=0; i<bool3.length; ++i) {
-            if (bool3[i] == true) {
-                texts3[i].setVisibility(View.VISIBLE);
-                ++numTrue[2];
-            } else {
-                texts3[i].setVisibility(View.GONE);
-            }
-        }
-
-        // Chap 4 가이드
-        for (int i=0; i<bool4.length; ++i) {
-            if (bool4[i] == true) {
-                texts4[i].setVisibility(View.VISIBLE);
-                ++numTrue[3];
-            } else {
-                texts4[i].setVisibility(View.GONE);
-            }
-        }
-
-        // Chap 5 가이드
-        for (int i=0; i<bool5.length; ++i) {
-            if (bool5[i] == true) {
-                texts5[i].setVisibility(View.VISIBLE);
-                ++numTrue[4];
-            } else {
-                texts5[i].setVisibility(View.GONE);
-            }
-        }
-
-        // Chap 6 가이드
-        for (int i=0; i<bool6.length; ++i) {
-            if (bool6[i] == true) {
-                texts6[i].setVisibility(View.VISIBLE);
-                ++numTrue[5];
-            } else {
-                texts6[i].setVisibility(View.GONE);
-            }
-        }
-
-        // true가 한개라도 있으면 소제목 visible, 아니면 gone
+        // '전혀아니다, 아니다'가 한개라도 있으면 -> 소제목 visible, 아니면 gone
         for (int i=0; i<numTrue.length; ++i) {
             if (numTrue[i] != 0) {
                 titles[i].setVisibility(View.VISIBLE);
@@ -223,6 +207,67 @@ public class Menu2Result extends AppCompatActivity {
                 titles[i].setVisibility(View.GONE);
             }
         }
+
+        // 방사형 차트 점수 계산
+        float[] scores = new float[6];
+        for (int i=0; i<answers.length; ++i) {
+            int a = 0;
+            int b = 0;
+            for (int j=0; j<answers[i].length; ++j) {
+                if (answers[i][j] == 2 || answers[i][j] == 3 || answers[i][j] == 4) {
+                    a += 1;
+                    b += 1;
+                } else if (answers[i][j] == 0 || answers[i][j] == 1) {
+                    b += 1;
+                }
+            }
+            scores[i] = (a==0 && b==0) ? 0 : ((float) a / b * 100);
+        }
+
+        /////////////////// RadarChart 설정 /////////////////////
+        RadarChart radarChart;
+        radarChart = findViewById(R.id.chart);
+
+        ArrayList<RadarEntry> dataVals = new ArrayList<>();
+        dataVals.add(new RadarEntry(scores[0]));
+        dataVals.add(new RadarEntry(scores[1]));
+        dataVals.add(new RadarEntry(scores[2]));
+        dataVals.add(new RadarEntry(scores[3]));
+        dataVals.add(new RadarEntry(scores[4]));
+        dataVals.add(new RadarEntry(scores[5]));
+
+        RadarDataSet dataSet = new RadarDataSet(dataVals, "DATA");
+        //dataSet.enableDashedHighlightLine(10f, 5f, 0f);
+        dataSet.setColor(getResources().getColor(R.color.blue_1));
+        dataSet.setFillColor(getResources().getColor(R.color.blue_2));
+        dataSet.setDrawFilled(true);
+        dataSet.setValueTextSize(12);
+        dataSet.setValueTextColor(Color.parseColor("#FF7F7F7F"));
+        //dataSet.setFormLineDashEffect(new DashPathEffect(new float[]{10f, 5f}, 0f));
+
+
+        RadarData data = new RadarData();
+        data.addDataSet(dataSet);
+        String[] labels = {"암호화폐 지갑","거래","보상","큐레이팅","보안","증명"};
+
+        XAxis xAxis = radarChart.getXAxis();
+        xAxis.setValueFormatter(new IndexAxisValueFormatter(labels));
+        xAxis.setTextSize(18);
+        xAxis.setTextColor(R.color.navy_1);
+
+        YAxis yAxis = radarChart.getYAxis();
+        yAxis.setAxisMaximum(100);
+        yAxis.setAxisMinimum(0);
+        yAxis.setDrawLabels(false);
+
+        radarChart.setData(data);
+        radarChart.getDescription().setEnabled(false);
+        radarChart.getLegend().setEnabled(false);
+
+
+
+
+        //////////////////////////////////////////////////////////////////////////////
 
         SimpleDateFormat sdf = new SimpleDateFormat( "yyyyMMddHHmmss"); //년,월,일,시간 포멧 설정
         Date time = new Date(); //파일명 중복 방지를 위해 사용될 현재시간
@@ -351,6 +396,8 @@ public class Menu2Result extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()) {
             case android.R.id.home:
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
                 finish();
                 return true;
         }

@@ -1,21 +1,16 @@
 package com.example.blue;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.opengl.GLES20;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -50,22 +45,6 @@ public class Menu1Activity extends AppCompatActivity {
 
         TabLayout tab = (TabLayout) findViewById(R.id.menu1_tab);
         tab.setupWithViewPager(pager);
-
-/*
-        img1 = (ImageView) findViewById(R.id.menu1_imgview1);
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.menu1_img1);
-        //Bitmap resized = Bitmap.createScaledBitmap( bitmap, 240, 160, true );
-
-        int[] maxTextureSize = new int[1];
-        GLES20.glGetIntegerv(GLES20.GL_MAX_TEXTURE_SIZE, maxTextureSize, 0);
-
-        if (bitmap.getHeight() > maxTextureSize[0]){
-            int resizedWidth = 160;
-            int resizedHeight = 80;
-            bitmap.createScaledBitmap(bitmap, resizedWidth, resizedHeight, false);
-        }
-
-        img1.setImageBitmap(bitmap);*/
 
     }
 

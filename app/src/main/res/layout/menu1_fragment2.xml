@@ -1,92 +1,220 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Menu1Fragment2">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="24dp">
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:textStyle="bold"
-            android:textSize="22dp"
-            android:text="블록체인 서비스 UX 체크리스트 목적"
-            android:gravity="center"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="24dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="본 어플리케이션은 다음과 같은 목적으로 사용할 수 있습니다."/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:textStyle="bold"
+                android:textSize="24dp"
+                android:text="UX 소개" />
 
-        <ImageView
-            android:id="@+id/menu1_imgview1"
-            android:layout_width="wrap_content"
-            android:layout_height="160dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="8dp"
-            android:src="@drawable/menu1_img1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menu1_41"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_gravity="center"
-            android:textSize="18dp"
-            android:text="서비스 설계 시 참고" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="32dp">
 
-        <ImageView
-            android:id="@+id/menu1_imgview2"
-            android:layout_width="wrap_content"
-            android:layout_height="160dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="8dp"
-            android:src="@drawable/menu1_img2"/>
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="6dp"
+                        android:layout_marginRight="16dp"
+                        android:text="@string/menu1_211"
+                        android:textSize="18dp"
+                        android:textColor="@color/navy_5"
+                        android:textStyle="bold"
+                        android:gravity="right" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:layout_marginBottom="6dp"
+                        android:textSize="16dp"
+                        android:text="@string/menu1_212" />
+                </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_gravity="center"
-            android:textSize="18dp"
-            android:text="서비스의 UX 평가" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_4"
+                    android:layout_marginVertical="16dp"/>
 
-        <ImageView
-            android:id="@+id/menu1_imgview3"
-            android:layout_width="wrap_content"
-            android:layout_height="160dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="8dp"
-            android:src="@drawable/menu1_img3"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="6dp"
+                        android:layout_marginRight="16dp"
+                        android:text="@string/menu1_221"
+                        android:textSize="18dp"
+                        android:textColor="@color/navy_5"
+                        android:textStyle="bold"
+                        android:gravity="right" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:layout_marginBottom="6dp"
+                        android:textSize="16dp"
+                        android:text="@string/menu1_222" />
+                </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_gravity="center"
-            android:textSize="18dp"
-            android:text="서비스 운영 중 UX 개선" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_4"
+                    android:layout_marginVertical="16dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:textAlignment="center"
-            android:layout_gravity="center"
-            android:textSize="12dp"
-            android:text="Designed by vectorjuice, upklyak / Freepik" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="6dp"
+                        android:layout_marginRight="16dp"
+                        android:text="@string/menu1_231"
+                        android:textSize="18dp"
+                        android:textColor="@color/navy_5"
+                        android:textStyle="bold"
+                        android:gravity="right" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:layout_marginBottom="6dp"
+                        android:textSize="16dp"
+                        android:text="@string/menu1_232" />
+                </LinearLayout>
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_4"
+                    android:layout_marginVertical="16dp"/>
 
-    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="6dp"
+                        android:layout_marginRight="16dp"
+                        android:text="@string/menu1_241"
+                        android:textSize="18dp"
+                        android:textColor="@color/navy_5"
+                        android:textStyle="bold"
+                        android:gravity="right" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:layout_marginBottom="6dp"
+                        android:textSize="16dp"
+                        android:text="@string/menu1_242" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_4"
+                    android:layout_marginVertical="16dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="6dp"
+                        android:layout_marginRight="16dp"
+                        android:text="@string/menu1_251"
+                        android:textSize="18dp"
+                        android:textColor="@color/navy_5"
+                        android:textStyle="bold"
+                        android:gravity="right" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:layout_marginBottom="6dp"
+                        android:textSize="16dp"
+                        android:text="@string/menu1_252" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_4"
+                    android:layout_marginVertical="16dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="6dp"
+                        android:layout_marginRight="16dp"
+                        android:text="@string/menu1_261"
+                        android:textSize="18dp"
+                        android:textColor="@color/navy_5"
+                        android:textStyle="bold"
+                        android:gravity="right" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:layout_marginBottom="6dp"
+                        android:textSize="16dp"
+                        android:text="@string/menu1_262" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
     </ScrollView>
 
 </FrameLayout>

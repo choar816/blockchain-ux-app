@@ -13,10 +13,21 @@
     <color name="navy_2">#FF072F6B</color>
     <color name="navy_3">#FF265B96</color> <!-- 38, 91, 150 -->
     <color name="navy_4">#FF6197B0</color> <!-- 97, 151, 176 -->
+    <color name="navy_5">#FF44546A</color> <!-- 68, 84, 106 -->
+    <color name="navy_6">#FF829DB2</color> <!-- 130, 157, 178 -->
+    <color name="navy_7">#FF3e6487</color> <!-- 62, 100, 135 -->
+
     <color name="gray_1">#FFE0E0E0</color> <!-- 224, 224, 224 -->
     <color name="gray_2">#FF5E5E5E</color> <!-- 94, 94, 94 -->
     <color name="gray_3">#FF929292</color> <!-- 146, 146, 146 -->
-    <color name="red_1">#FFCF5F13</color> <!-- 207, 95, 19 -->
+    <color name="gray_4">#FFBFBFBF</color> <!-- 191, 191, 191 -->
+    <color name="gray_5">#FFC7CED2</color> <!-- 199, 206, 210 -->
+
+    <color name="red_1">#FFE36C33</color> <!-- 227, 108, 51 -->
+    <color name="red_2">#FFedad88</color> <!-- 237, 173, 136 -->
+
+    <color name="blue_1">#FFBDD7EE</color> <!-- 189, 215, 238 -->
+    <color name="blue_2">#80BDD7EE</color> <!-- 189, 215, 238 -->
 
 
     <color name="textOriginal">#FF000000</color>

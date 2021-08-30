@@ -1,6 +1,7 @@
 package com.example.blue;
 
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,7 +24,7 @@ public class Menu2Activity2 extends AppCompatActivity {
 
         // action bar 설정 (제목, 뒤로가기버튼)
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("체크리스트");
+        getSupportActionBar().setTitle("체크리스트(2/6)");
 
         RadioGroup groups[] = new RadioGroup[12];
         groups[0] = (RadioGroup) findViewById(R.id.rg_201);
@@ -41,26 +42,30 @@ public class Menu2Activity2 extends AppCompatActivity {
 
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
-        boolean[] answer1 = bundle.getBooleanArray("answer1");
+        int[] answer1 = bundle.getIntArray("answer1");
 
-        boolean answer[] = new boolean[12];
-        for (int i=0; i<12; ++i) {
-            answer[i] = false;
+        int answer[] = new int[12];
+        for (int i=0; i<answer.length; ++i) {
+            answer[i] = -1;
         }
 
         CheckBox checkBox = (CheckBox) findViewById(R.id.checkbox2);
         checkBox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                for (int i=0; i<groups.length; ++i) {
-                    groups[i].check(groups[i].getChildAt(5).getId());
+                if (((CheckBox)v).isChecked()) {
+                    for (int i = 0; i < groups.length; ++i) {
+                        groups[i].check(groups[i].getChildAt(5).getId());
+                        answer[i] = 5;
+                    }
+                } else {
+                    for (int i = 0; i < groups.length; ++i) {
+                        if (groups[i].getCheckedRadioButtonId() == groups[i].getChildAt(5).getId()) {
+                            groups[i].clearCheck();
+                            answer[i] = -1;
+                        }
+                    }
                 }
-
-                Intent intent = new Intent(getApplicationContext(), Menu2Activity3.class);
-                intent.putExtra("answer1", answer1);
-                intent.putExtra("answer2", answer);
-                startActivity(intent);
-                finish();
             }
         });
 
@@ -90,7 +95,7 @@ public class Menu2Activity2 extends AppCompatActivity {
                     } else {
                         texts[finalI].setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOriginal));
                     }
-                    answer[finalI] = (index == 0 || index == 1);
+                    answer[finalI] = index;
                 }
             });
         }
@@ -101,8 +106,6 @@ public class Menu2Activity2 extends AppCompatActivity {
         prev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Menu2Activity1.class);
-                startActivity(intent);
                 finish();
             }
         });
@@ -113,6 +116,9 @@ public class Menu2Activity2 extends AppCompatActivity {
                 for (int i=0; i<groups.length; ++i) {
                     if (groups[i].getCheckedRadioButtonId() == -1) {
                         ++num_unchecked;
+                        texts[i].setPaintFlags(texts[i].getPaintFlags() | Paint.FAKE_BOLD_TEXT_FLAG);
+                    } else {
+                        texts[i].setPaintFlags(texts[i].getPaintFlags() &~ Paint.FAKE_BOLD_TEXT_FLAG);
                     }
                 }
 
@@ -123,7 +129,6 @@ public class Menu2Activity2 extends AppCompatActivity {
                     intent.putExtra("answer1", answer1);
                     intent.putExtra("answer2", answer);
                     startActivity(intent);
-                    finish();
                 }
             }
         });

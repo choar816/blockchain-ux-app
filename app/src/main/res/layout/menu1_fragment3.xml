@@ -4,210 +4,91 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Menu1Fragment3">
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <LinearLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center_horizontal"
-            android:padding="24dp">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:text="어플리케이션 활용 방안"
+            android:gravity="center"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:textSize="24dp"
-                android:text="평가 가능한 기능 목록" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="본 어플리케이션은 다음과 같은 목적으로 사용할 수 있습니다."
+            android:gravity="center_horizontal" />
 
-            <TextView
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/background_text"
-                android:padding="8dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginBottom="20dp"
-                android:text="암호 화폐 지갑"
-                android:textSize="18dp"
-                android:textAlignment="center"
-                android:gravity="center_horizontal" />
+        <ImageView
+            android:id="@+id/menu1_imgview1"
+            android:layout_width="wrap_content"
+            android:layout_height="160dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/menu1_img1"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAlignment="textStart"
-                android:layout_gravity="start"
-                android:layout_marginTop="4dp"
-                android:textSize="16dp"
-                android:text="@string/menu1_311" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAlignment="textStart"
-                android:layout_gravity="start"
-                android:layout_marginTop="4dp"
-                android:textSize="16dp"
-                android:text="@string/menu1_312" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textSize="18dp"
+            android:text="서비스 설계 시 참고" />
 
+        <ImageView
+            android:id="@+id/menu1_imgview2"
+            android:layout_width="wrap_content"
+            android:layout_height="160dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/menu1_img2"/>
 
-            <TextView
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/background_text"
-                android:padding="8dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginBottom="20dp"
-                android:text="거래"
-                android:textSize="18dp"
-                android:textAlignment="center"
-                android:gravity="center_horizontal" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textSize="18dp"
+            android:text="서비스의 UX 평가" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAlignment="textStart"
-                android:layout_gravity="start"
-                android:justificationMode="inter_word"
-                android:layout_marginTop="4dp"
-                android:textSize="16dp"
-                android:text="@string/menu1_321" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAlignment="textStart"
-                android:layout_gravity="start"
-                android:justificationMode="inter_word"
-                android:layout_marginTop="4dp"
-                android:textSize="16dp"
-                android:text="@string/menu1_322" />
+        <ImageView
+            android:id="@+id/menu1_imgview3"
+            android:layout_width="wrap_content"
+            android:layout_height="160dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/menu1_img3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textSize="18dp"
+            android:text="서비스 운영 중 UX 개선" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textSize="12dp"
+            android:text="Designed by vectorjuice, upklyak / Freepik" />
 
 
-            <TextView
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/background_text"
-                android:padding="8dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginBottom="20dp"
-                android:text="보상"
-                android:textSize="18dp"
-                android:textAlignment="center"
-                android:gravity="center_horizontal" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAlignment="textStart"
-                android:layout_gravity="start"
-                android:justificationMode="inter_word"
-                android:layout_marginTop="4dp"
-                android:textSize="16dp"
-                android:text="@string/menu1_331" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAlignment="textStart"
-                android:layout_gravity="start"
-                android:justificationMode="inter_word"
-                android:layout_marginTop="4dp"
-                android:textSize="16dp"
-                android:text="@string/menu1_332" />
-
-            <TextView
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/background_text"
-                android:padding="8dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginBottom="20dp"
-                android:text="큐레이팅"
-                android:textSize="18dp"
-                android:textAlignment="center"
-                android:gravity="center_horizontal" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAlignment="textStart"
-                android:layout_gravity="start"
-                android:justificationMode="inter_word"
-                android:layout_marginTop="4dp"
-                android:textSize="16dp"
-                android:text="@string/menu1_341" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAlignment="textStart"
-                android:layout_gravity="start"
-                android:justificationMode="inter_word"
-                android:layout_marginTop="4dp"
-                android:textSize="16dp"
-                android:text="@string/menu1_342" />
-
-            <TextView
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/background_text"
-                android:padding="8dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginBottom="20dp"
-                android:text="보안"
-                android:textSize="18dp"
-                android:textAlignment="center"
-                android:gravity="center_horizontal" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAlignment="textStart"
-                android:layout_gravity="start"
-                android:layout_marginTop="4dp"
-                android:textSize="16dp"
-                android:text="@string/menu1_351" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAlignment="textStart"
-                android:layout_gravity="start"
-                android:layout_marginTop="4dp"
-                android:textSize="16dp"
-                android:text="@string/menu1_352" />
-
-            <TextView
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/background_text"
-                android:padding="8dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginBottom="20dp"
-                android:text="증명"
-                android:textSize="18dp"
-                android:textAlignment="center"
-                android:gravity="center_horizontal" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAlignment="textStart"
-                android:layout_gravity="start"
-                android:layout_marginTop="4dp"
-                android:textSize="16dp"
-                android:text="@string/menu1_361" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAlignment="textStart"
-                android:layout_gravity="start"
-                android:justificationMode="inter_word"
-                android:layout_marginTop="4dp"
-                android:textSize="16dp"
-                android:text="@string/menu1_362" />
-
-        </LinearLayout>
+    </LinearLayout>
     </ScrollView>
 
 </FrameLayout>

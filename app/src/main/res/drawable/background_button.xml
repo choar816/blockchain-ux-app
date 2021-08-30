@@ -6,4 +6,19 @@
             <corners android:radius="8dp" />
         </shape>
     </item>
+
+    <item android:state_focused="true">
+        <shape>
+            <solid android:color="@color/navy_1"/>
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/navy_1"/>
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+
 </selector>
