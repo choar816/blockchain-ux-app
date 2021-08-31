@@ -2,6 +2,7 @@ package com.example.blue;
 
 import android.content.Intent;
 import android.graphics.Paint;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -108,9 +109,9 @@ public class Menu2Activity4 extends AppCompatActivity {
                 for (int i=0; i<groups.length; ++i) {
                     if (groups[i].getCheckedRadioButtonId() == -1) {
                         ++num_unchecked;
-                        texts[i].setPaintFlags(texts[i].getPaintFlags() | Paint.FAKE_BOLD_TEXT_FLAG);
+                        texts[i].setTypeface(null, Typeface.BOLD);
                     } else {
-                        texts[i].setPaintFlags(texts[i].getPaintFlags() &~ Paint.FAKE_BOLD_TEXT_FLAG);
+                        texts[i].setTypeface(null, Typeface.NORMAL);
                     }
                 }
 
