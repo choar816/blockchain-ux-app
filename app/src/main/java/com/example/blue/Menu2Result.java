@@ -265,132 +265,130 @@ public class Menu2Result extends AppCompatActivity {
         radarChart.getLegend().setEnabled(false);
 
 
-
-
         //////////////////////////////////////////////////////////////////////////////
 
-        SimpleDateFormat sdf = new SimpleDateFormat( "yyyyMMddHHmmss"); //년,월,일,시간 포멧 설정
-        Date time = new Date(); //파일명 중복 방지를 위해 사용될 현재시간
-        String current_time = sdf.format(time); //String형 변수에 저장
-
-        LinearLayout layout = (LinearLayout) findViewById(R.id.result_layout);
-        ScrollView scrollView = (ScrollView) findViewById(R.id.result_scrollview);
-
-        AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setMessage("사진 앨범에 저장하시겠습니까?");
-        alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                //Screenshot1();
-                Screenshot2(layout, current_time);
-            }
-        });
-        alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface arg0, int arg1) {
-            }
-        });
-
-        save = (Button) findViewById(R.id.save_guide);
-        save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                verifyStoragePermissions(Menu2Result.this);
-                alert.show();
-            }
-        });
+//        SimpleDateFormat sdf = new SimpleDateFormat( "yyyyMMddHHmmss"); //년,월,일,시간 포멧 설정
+//        Date time = new Date(); //파일명 중복 방지를 위해 사용될 현재시간
+//        String current_time = sdf.format(time); //String형 변수에 저장
+//
+//        LinearLayout layout = (LinearLayout) findViewById(R.id.result_layout);
+//        ScrollView scrollView = (ScrollView) findViewById(R.id.result_scrollview);
+//
+//        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+//        alert.setMessage("사진 앨범에 저장하시겠습니까?");
+//        alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                //Screenshot1();
+//                Screenshot2(layout, current_time);
+//            }
+//        });
+//        alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface arg0, int arg1) {
+//            }
+//        });
+//
+//        save = (Button) findViewById(R.id.save_guide);
+//        save.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                verifyStoragePermissions(Menu2Result.this);
+//                alert.show();
+//            }
+//        });
 
     }
-
-    // Works for Mi Pad
-    private void Screenshot1() {
-        Date now = new Date();
-        android.text.format.DateFormat.format("yyyymmdd_hhmmss", now);
-
-        try {
-            // image naming and path  to include sd card  appending name you choose for file
-            String mPath = Environment.getExternalStorageDirectory().toString() + "/" + now + ".jpg";
-
-            // create bitmap screen capture
-            View v1 = getWindow().getDecorView().getRootView();
-            v1.setDrawingCacheEnabled(true);
-            Bitmap bitmap = Bitmap.createBitmap(v1.getDrawingCache());
-            v1.setDrawingCacheEnabled(false);
-
-            File imageFile = new File(mPath);
-
-            FileOutputStream outputStream = new FileOutputStream(imageFile);
-            int quality = 100;
-            bitmap.compress(Bitmap.CompressFormat.JPEG, quality, outputStream);
-            outputStream.flush();
-            outputStream.close();
-
-            Toast.makeText(getApplicationContext(), "사진 앨범에 저장되었습니다.", Toast.LENGTH_SHORT).show();
-
-        } catch (Throwable e) {
-            // Several error may come out with file handling or DOM
-            e.printStackTrace();
-
-            Toast.makeText(getApplicationContext(), "사진 저장에 실패했습니다.", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    private void Screenshot2(View view, String title){
-        if (view == null) { //Null Point Exception ERROR 방지
-            System.out.println("::::ERROR:::: view == NULL");
-            return;
-        }
-
-        /* 캡쳐 파일 저장 */
-        view.buildDrawingCache(); //캐시 비트 맵 만들기
-        Bitmap bitmap = view.getDrawingCache();
-        FileOutputStream fos;
-
-        /* 저장할 폴더 Setting */
-        File uploadFolder = Environment.getExternalStoragePublicDirectory("/DCIM/Camera/"); //저장 경로 (File Type형 변수)
-
-        if (!uploadFolder.exists()) { //만약 경로에 폴더가 없다면
-            uploadFolder.mkdir(); //폴더 생성
-        }
-
-        /* 파일 저장 */
-        String Str_Path = Environment.getExternalStorageDirectory().getAbsolutePath()+"/DCIM/Camera/"; //저장 경로 (String Type 변수)
-
-        try {
-            fos = new FileOutputStream(Str_Path+title+".jpg"); // 경로 + 제목 + .jpg로 FileOutputStream Setting
-            bitmap.compress(Bitmap.CompressFormat.JPEG,80,fos);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        MediaScanner ms = MediaScanner.newInstance(getApplicationContext());
-
-        try { // TODO : 미디어 스캔
-            ms.mediaScanning(Str_Path + title + ".jpg");
-            Toast.makeText(getApplicationContext(), "사진 앨범에 저장되었습니다.", Toast.LENGTH_SHORT).show();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            System.out.println("::::ERROR:::: " + e);
-            Toast.makeText(getApplicationContext(), "사진 저장에 실패했습니다.", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-
-    // verifying if storage permission is given or not
-    public static void verifyStoragePermissions(Activity activity) {
-
-        int permission1 = ActivityCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        int permission2 = ActivityCompat.checkSelfPermission(activity, Manifest.permission.READ_EXTERNAL_STORAGE);
-
-        // If storage permission is not given then request for External Storage Permission
-        if (permission1 != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(activity, permissionstorage, REQUEST_EXTERNAL_STORAGE);
-        }
-        if (permission2 != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(activity, permissionstorage, REQUEST_EXTERNAL_STORAGE);
-        }
-    }
+//
+//    // Works for Mi Pad
+//    private void Screenshot1() {
+//        Date now = new Date();
+//        android.text.format.DateFormat.format("yyyymmdd_hhmmss", now);
+//
+//        try {
+//            // image naming and path  to include sd card  appending name you choose for file
+//            String mPath = Environment.getExternalStorageDirectory().toString() + "/" + now + ".jpg";
+//
+//            // create bitmap screen capture
+//            View v1 = getWindow().getDecorView().getRootView();
+//            v1.setDrawingCacheEnabled(true);
+//            Bitmap bitmap = Bitmap.createBitmap(v1.getDrawingCache());
+//            v1.setDrawingCacheEnabled(false);
+//
+//            File imageFile = new File(mPath);
+//
+//            FileOutputStream outputStream = new FileOutputStream(imageFile);
+//            int quality = 100;
+//            bitmap.compress(Bitmap.CompressFormat.JPEG, quality, outputStream);
+//            outputStream.flush();
+//            outputStream.close();
+//
+//            Toast.makeText(getApplicationContext(), "사진 앨범에 저장되었습니다.", Toast.LENGTH_SHORT).show();
+//
+//        } catch (Throwable e) {
+//            // Several error may come out with file handling or DOM
+//            e.printStackTrace();
+//
+//            Toast.makeText(getApplicationContext(), "사진 저장에 실패했습니다.", Toast.LENGTH_SHORT).show();
+//        }
+//    }
+//
+//    private void Screenshot2(View view, String title){
+//        if (view == null) { //Null Point Exception ERROR 방지
+//            System.out.println("::::ERROR:::: view == NULL");
+//            return;
+//        }
+//
+//        /* 캡쳐 파일 저장 */
+//        view.buildDrawingCache(); //캐시 비트 맵 만들기
+//        Bitmap bitmap = view.getDrawingCache();
+//        FileOutputStream fos;
+//
+//        /* 저장할 폴더 Setting */
+//        File uploadFolder = Environment.getExternalStoragePublicDirectory("/DCIM/Camera/"); //저장 경로 (File Type형 변수)
+//
+//        if (!uploadFolder.exists()) { //만약 경로에 폴더가 없다면
+//            uploadFolder.mkdir(); //폴더 생성
+//        }
+//
+//        /* 파일 저장 */
+//        String Str_Path = Environment.getExternalStorageDirectory().getAbsolutePath()+"/DCIM/Camera/"; //저장 경로 (String Type 변수)
+//
+//        try {
+//            fos = new FileOutputStream(Str_Path+title+".jpg"); // 경로 + 제목 + .jpg로 FileOutputStream Setting
+//            bitmap.compress(Bitmap.CompressFormat.JPEG,80,fos);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//
+//        MediaScanner ms = MediaScanner.newInstance(getApplicationContext());
+//
+//        try { // TODO : 미디어 스캔
+//            ms.mediaScanning(Str_Path + title + ".jpg");
+//            Toast.makeText(getApplicationContext(), "사진 앨범에 저장되었습니다.", Toast.LENGTH_SHORT).show();
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            System.out.println("::::ERROR:::: " + e);
+//            Toast.makeText(getApplicationContext(), "사진 저장에 실패했습니다.", Toast.LENGTH_SHORT).show();
+//        }
+//    }
+//
+//
+//    // verifying if storage permission is given or not
+//    public static void verifyStoragePermissions(Activity activity) {
+//
+//        int permission1 = ActivityCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+//        int permission2 = ActivityCompat.checkSelfPermission(activity, Manifest.permission.READ_EXTERNAL_STORAGE);
+//
+//        // If storage permission is not given then request for External Storage Permission
+//        if (permission1 != PackageManager.PERMISSION_GRANTED) {
+//            ActivityCompat.requestPermissions(activity, permissionstorage, REQUEST_EXTERNAL_STORAGE);
+//        }
+//        if (permission2 != PackageManager.PERMISSION_GRANTED) {
+//            ActivityCompat.requestPermissions(activity, permissionstorage, REQUEST_EXTERNAL_STORAGE);
+//        }
+//    }
 
 
     public boolean onOptionsItemSelected(MenuItem item){

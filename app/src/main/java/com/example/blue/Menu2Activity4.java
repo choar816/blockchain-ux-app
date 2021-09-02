@@ -88,6 +88,9 @@ public class Menu2Activity4 extends AppCompatActivity {
                         texts[finalI].setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOmitted));
                     } else {
                         texts[finalI].setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textOriginal));
+                        if (checkBox.isChecked()) {
+                            checkBox.toggle();
+                        }
                     }
                     answer[finalI] = index;
                 }
